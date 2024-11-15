@@ -27,7 +27,7 @@
                     <div class="right">
                         <div class="search">
                             <form class="search-box">
-                                <input type="search" name="s" id="s" class="search-input" placeholder="Search...">
+                                <input type="search" name="s" id="s" class="search-input" placeholder="Search..." search>
                                 <button type="submit" class="search-button">
                                     <i class="search-icon">
                                         <img src="./img/search.svg" class="search-svg"/>
@@ -58,6 +58,7 @@
                 </div>
             </div>
         </header>
+
 
 
         <header class="header header-sm">
@@ -97,129 +98,32 @@
 
         <main class="content-area">
             <div class="content-container">
-                <div class="grid">
-                    <a href="" class="cell-outer research us">
+
+                <template grid-template>
+                    <div class="cell-outer" cell-outer>
                         <div class="cell-inner">
-
-
-                            <div class="cell-logo">
-                                <img class="card-item logo" src="./img/ehstoday-logo.webp"/>
+                            <div class="cell-logo" >  
+                                <img class="card-item logo" src="" cell-logo/>
                             </div>
-
-                            <div class="cell-tag">
-                                <p class="card-item tag location noto-sans-reg">U.S.</p>
-                                <p class="card-item tag genre noto-sans-reg">Research</p>
+                            <div class="cell-tag" cell-tag>
+                                <div class="category-tag card-item tag genre noto-sans-reg" category-tag></div>
+                                <div class="location-tag card-item tag location noto-sans-reg" location-tag></div>
                             </div>
-
-                            <div class="cell-title">
-                                <h3 class="card-item title nunito-sans-bold">Half of All Americans Have Musculoskeletal Pain</h3>
+                            <div class="cell-title" >
+                                <h3 class="card-item title nunito-sans-bold" cell-title></h3>
                             </div>
-
                         </div>
-                    </a>
-
-                    <a href="" class="cell-outer legal us">
-                        <div class="cell-inner">
+                    </div>
+                </template>
 
 
-                            <div class="cell-logo">
-                                <img class="card-item logo" src="./img/OSHA-logo-.webp"/>
-                            </div>
-
-                            <div class="cell-tag">
-                                <p class="card-item tag location noto-sans-reg">U.S.</p>
-                                <p class="card-item tag genre noto-sans-reg">Legal</p>
-                            </div>
-
-                            <div class="cell-title">
-                                <h3 class="card-item title nunito-sans-bold">OSHA announced funding opportunities for $11 Million in grants through its Susan Harwood Training Grants Program</h3>
-                            </div>
-
-                        </div>
-                    </a>
-
-                    <a href="" class="cell-outer legal us">
-                        <div class="cell-inner">
-
-
-                            <div class="cell-logo">
-                                <img class="card-item logo" src="./img/national-law-logo.webp"/>
-                            </div>
-
-                            <div class="cell-tag">
-                                <p class="card-item tag location noto-sans-reg">U.S.</p>
-                                <p class="card-item tag genre noto-sans-reg">Legal</p>
-                            </div>
-
-                            <div class="cell-title">
-                                <h3 class="card-item title nunito-sans-bold">OSHA Launches National Emphasis Program to Expand on Heat Illness Prevention Campaign</h3>
-                            </div>
-
-                        </div>
-                    </a>
-
-                    <a href="" class="cell-outer events us">
-                        <div class="cell-inner">
-
-
-                            <div class="cell-logo">
-                                <img class="card-item logo" src="./img/nsc-logo.webp"/>
-                            </div>
-
-                            <div class="cell-tag">
-                                <p class="card-item tag location noto-sans-reg">U.S.</p>
-                                <p class="card-item tag genre noto-sans-reg">Events</p>
-                            </div>
-
-                            <div class="cell-title">
-                                <h3 class="card-item title nunito-sans-bold">2022 NSC Safety Congress & Expo</h3>
-                            </div>
-
-                        </div>
-                    </a>
-
-                    <a href="" class="cell-outer research us">
-                        <div class="cell-inner">
-
-
-                            <div class="cell-logo">
-                                <img class="card-item logo" src="./img/nsc-logo-2.webp"/>
-                            </div>
-
-                            <div class="cell-tag">
-                                <p class="card-item tag location noto-sans-reg">U.S.</p>
-                                <p class="card-item tag genre noto-sans-reg">Research</p>
-                            </div>
-
-                            <div class="cell-title">
-                                <h3 class="card-item title nunito-sans-bold">National Safety Council, Amazon and Top Industry Employers Pledge to Reduce Workplace Injuries by 25% by 2025</h3>
-                            </div>
-
-                        </div>
-                    </a>
-
-                    <a href="" class="cell-outer industry us">
-                        <div class="cell-inner">
-
-
-                            <div class="cell-logo">
-                                <img class="card-item logo" src="./img/seattle-times-logo.webp"/>
-                            </div>
-
-                            <div class="cell-tag">
-                                <p class="card-item tag location noto-sans-reg">U.S.</p>
-                                <p class="card-item tag genre noto-sans-reg">Industry</p>
-                            </div>
-
-                            <div class="cell-title">
-                                <h3 class="card-item title nunito-sans-bold">Amid criticism of workplace injuries, Amazon signs a new safety pledge</h3>
-                            </div>
-
-                        </div>
-                    </a>
+                <div class="grid" card-container>
+                    
 
 
                 </div>
+
+
             </div>
         </main>
     </div>

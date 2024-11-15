@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Half of All Americans Have Musculoskeletal Pain",
+        "location": "US",
+        "category": "Research",
+        "image": "./img/ehstoday-logo.webp"
+    },
+    {
+        "title": "OSHA announced funding opportunities for $11 Million in grants through its Susan Harwood Training Grants Program",
+        "location": "US",
+        "category": "Legal",
+        "image": "./img/OSHA-logo-.webp"
+    },{
+        "title": "OSHA Launches National Emphasis Program to Expand on Heat Illness Prevention Campaign",
+        "location": "US",
+        "category": "Legal",
+        "image": "./img/national-law-logo.webp"
+    },
+    {
+        "title": "2022 NSC Safety Congress & Expo",
+        "location": "US",
+        "category": "Events",
+        "image": "./img/nsc-logo.webp"
+    },
+    {
+        "title": "National Safety Council, Amazon and Top Industry Employers Pledge to Reduce Workplace Injuries by 25% by 2025",
+        "location": "US",
+        "category": "Research",
+        "image": "./img/nsc-logo-2.webp"
+    },
+    {
+        "title": "Amid criticism of workplace injuries, Amazon signs a new safety pledge",
+        "location": "US",
+        "category": "Industry",
+        "image": "./img/seattle-times-logo.webp"
+    }
+]
