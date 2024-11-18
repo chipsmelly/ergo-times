@@ -215,6 +215,8 @@ div {
     height: 36px;
     width: 180px;
     position: relative;
+
+    background-color: #353535;
 }
 
 .search-input {
@@ -225,11 +227,11 @@ div {
     line-height: 25px;
     margin-bottom: 0;
     font-size: 14px;
+    color: white;
+    border: #595959 solid 1px;
+    background-color: #353535;
 }
 
-.search-button {
-    position: absolute;
-}
 
 /* Bottom section of the nav bar */
 
@@ -283,7 +285,11 @@ li {
     padding: 8px 12px;
     font-weight: 700;
     line-height: 25px;
-    color: #353535;
+
+    color: white;
+    background-color: #353535;
+    border: #595959 solid 1px;
+
     cursor: pointer;
     display: block;
     font-size: 12px;
@@ -291,6 +297,18 @@ li {
     position: relative;
     text-transform: capitalize;
     width: 100%;
+}
+
+/* .filter-button:hover {
+    background-color: #242424;
+} */
+
+.hover-active {
+    background-color: #218121
+}
+
+.hover-inactive {
+    background-color: #242424;
 }
 
 /* grid for main content  */
