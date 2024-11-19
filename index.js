@@ -2,15 +2,37 @@
 
 const template = document.querySelector("[grid-template]")
 const cardContainer = document.querySelector("[card-container]")
+
+const filterButton = document.querySelector("[filter-button]")
+const filterIcon = document.querySelector("[filter-icon]")
+const filterWindow = document.querySelector("[filter-window]")
+const searchButton = document.querySelector("[search-button]")
+const searchIcon = document.querySelector("[search-icon]")
+const searchWindow = document.querySelector("[search-window]")
+
 const searchInput = document.querySelector("[search]")
+const searchBox = document.querySelector("[search-box]")
+const searchInputDrop = document.querySelector("[search-drop]")
+const searchBoxDrop = document.querySelector("[search-box-drop]")
+
 const legalButton = document.querySelector("#legal-button")
+const legalButtonDrop = document.querySelector("#legal-button-drop")
 const researchButton = document.querySelector("#research-button")
+const researchButtonDrop = document.querySelector("#research-button-drop")
 const industryButton = document.querySelector("#industry-button")
+const industryButtonDrop = document.querySelector("#industry-button-drop")
 const eventsButton = document.querySelector("#events-button")
+const eventsButtonDrop = document.querySelector("#events-button-drop")
 const usButton = document.querySelector("#us-button")
+const usButtonDrop = document.querySelector("#us-button-drop")
 const internationalButton = document.querySelector("#international-button")
+const internationalButtonDrop = document.querySelector("#international-button-drop")
+
 
 let articles = []
+
+let filterDropOpen = false;
+let searchDropOpen = false;
 
 let legal = false;
 let research = false;
@@ -48,6 +70,31 @@ fetch("./articles.json")
         cardContainer.append(card)
         return { image: article.image, category: article.category, location: article.location, title: article.title, element: card }
     })
+})
+
+
+filterButton.addEventListener("click", function () {
+    if (filterDropOpen === false) {
+        filterDropOpen = true
+        filterWindow.classList.remove("hide")
+        filterIcon.src = "./svg/funnel-gray.svg"
+    } else {
+        filterDropOpen = false
+        filterWindow.classList.add("hide")
+        filterIcon.src = "./svg/funnel-white.svg"
+    }
+})
+
+searchButton.addEventListener("click", function () {
+    if (searchDropOpen === false) {
+        searchDropOpen = true
+        searchWindow.classList.remove("hide")
+        searchIcon.src = "./svg/search-gray.svg"
+    } else {
+        searchDropOpen = false
+        searchWindow.classList.add("hide")
+        searchIcon.src = "./svg/search-white.svg"
+    }
 })
 
 
@@ -92,6 +139,46 @@ legalButton.addEventListener("mouseout", () => {
     }
 })
 
+legalButtonDrop.addEventListener("click", function () {
+    if (legal === false) {
+
+        legal = true;
+        activateButton(legalButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+        
+        legal = false;
+        deactivateButton(legalButtonDrop)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+legalButtonDrop.addEventListener("mouseover", () => {
+    if (legal === true) {
+        legalButtonDrop.style.backgroundColor = "#218221"
+    } else {
+        legalButtonDrop.style.backgroundColor = "#242424"
+    }
+})
+
+legalButtonDrop.addEventListener("mouseout", () => {
+    if (legal === true) {
+        legalButtonDrop.style.backgroundColor = "limegreen"
+    } else {
+        legalButtonDrop.style.backgroundColor = "#353535"
+    }
+})
+
 researchButton.addEventListener("click", function () {
     if (research === false) {
 
@@ -129,6 +216,46 @@ researchButton.addEventListener("mouseout", () => {
         researchButton.style.backgroundColor = "limegreen"
     } else {
         researchButton.style.backgroundColor = "#353535"
+    }
+})
+
+researchButtonDrop.addEventListener("click", function () {
+    if (research === false) {
+
+        research = true;
+        activateButton(researchButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+
+        research = false;
+        deactivateButton(researchButtonDrop)
+
+        if (legal === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+researchButtonDrop.addEventListener("mouseover", () => {
+    if (research === true) {
+        researchButtonDrop.style.backgroundColor = "#218221"
+    } else {
+        researchButtonDrop.style.backgroundColor = "#242424"
+    }
+})
+
+researchButtonDrop.addEventListener("mouseout", () => {
+    if (research === true) {
+        researchButtonDrop.style.backgroundColor = "limegreen"
+    } else {
+        researchButtonDrop.style.backgroundColor = "#353535"
     }
 })
 
@@ -172,6 +299,46 @@ industryButton.addEventListener("mouseout", () => {
     }
 })
 
+industryButtonDrop.addEventListener("click", function () {
+    if (industry === false) {
+
+        industry = true;
+        activateButton(industryButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+
+        industry = false;
+        deactivateButton(industryButtonDrop)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+industryButtonDrop.addEventListener("mouseover", () => {
+    if (industry === true) {
+        industryButtonDrop.style.backgroundColor = "#218221"
+    } else {
+        industryButtonDrop.style.backgroundColor = "#242424"
+    }
+})
+
+industryButtonDrop.addEventListener("mouseout", () => {
+    if (industry === true) {
+        industryButtonDrop.style.backgroundColor = "limegreen"
+    } else {
+        industryButtonDrop.style.backgroundColor = "#353535"
+    }
+})
+
 eventsButton.addEventListener("click", function () {
     if (events === false) {
 
@@ -209,6 +376,46 @@ eventsButton.addEventListener("mouseout", () => {
         eventsButton.style.backgroundColor = "limegreen"
     } else {
         eventsButton.style.backgroundColor = "#353535"
+    }
+})
+
+eventsButtonDrop.addEventListener("click", function () {
+    if (events === false) {
+
+        events = true;
+        activateButton(eventsButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+        
+    } else {
+
+        events = false;
+        deactivateButton(eventsButtonDrop)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+eventsButtonDrop.addEventListener("mouseover", () => {
+    if (events === true) {
+        eventsButtonDrop.style.backgroundColor = "#218221"
+    } else {
+        eventsButtonDrop.style.backgroundColor = "#242424"
+    }
+})
+
+eventsButtonDrop.addEventListener("mouseout", () => {
+    if (events === true) {
+        eventsButtonDrop.style.backgroundColor = "limegreen"
+    } else {
+        eventsButtonDrop.style.backgroundColor = "#353535"
     }
 })
 
@@ -250,6 +457,44 @@ usButton.addEventListener("mouseout", () => {
     }
 })
 
+usButtonDrop.addEventListener("click", function () {
+    if (us === false) {
+
+        us = true;
+        activateButton(usButtonDrop)
+
+        if (international === true) {
+            international = false
+            deactivateButton(internationalButtonDrop)
+        } else {
+            locationFilter = true
+        }
+
+    } else {
+        us = false;
+        deactivateButton(usButtonDrop)
+        locationFilter = false
+    }
+
+    refreshGrid()
+} )
+
+usButtonDrop.addEventListener("mouseover", () => {
+    if (us === true) {
+        usButtonDrop.style.backgroundColor = "#218221"
+    } else {
+        usButtonDrop.style.backgroundColor = "#242424"
+    }
+})
+
+usButtonDrop.addEventListener("mouseout", () => {
+    if (us === true) {
+        usButtonDrop.style.backgroundColor = "limegreen"
+    } else {
+        usButtonDrop.style.backgroundColor = "#353535"
+    }
+})
+
 internationalButton.addEventListener("click", function () {
     if (international === false) {
 
@@ -288,6 +533,44 @@ internationalButton.addEventListener("mouseout", () => {
     }
 })
 
+internationalButtonDrop.addEventListener("click", function () {
+    if (international === false) {
+
+        international = true
+        activateButton(internationalButtonDrop)
+        
+        if (us === true) {
+            us = false
+            deactivateButton(usButtonDrop)
+        } else {
+            locationFilter = true;
+        }
+
+    } else {
+        international = false
+        deactivateButton(internationalButtonDrop)
+        locationFilter = false
+    }
+
+    refreshGrid()
+} )
+
+internationalButtonDrop.addEventListener("mouseover", () => {
+    if (international === true) {
+        internationalButtonDrop.style.backgroundColor = "#218221"
+    } else {
+        internationalButtonDrop.style.backgroundColor = "#242424"
+    }
+})
+
+internationalButtonDrop.addEventListener("mouseout", () => {
+    if (international === true) {
+        internationalButtonDrop.style.backgroundColor = "limegreen"
+    } else {
+        internationalButtonDrop.style.backgroundColor = "#353535"
+    }
+})
+
 
 
 searchInput.addEventListener("input", e => {
@@ -295,6 +578,14 @@ searchInput.addEventListener("input", e => {
 
     refreshGrid()
 })
+
+searchInputDrop.addEventListener("input", e => {
+    searchValue = e.target.value.toLowerCase()
+
+    refreshGrid()
+})
+
+
 
 
 

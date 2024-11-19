@@ -26,7 +26,7 @@
 
                     <div class="right">
                         <div class="search">
-                            <form class="search-box">
+                            <form class="search-box" search-box>
                                 <input type="search" name="s" id="s" class="search-input" placeholder="Search..." search>
                             </form>
                         </div>
@@ -37,18 +37,20 @@
                     <div class="filter-outer">
                         <div class="filter-inner">
                             <div class="filter-tabs">
-                                <ul>
+                                <ul class="tab-item cat-tabs">
                                     <li class="filter-item"><button class="filter-button noto-sans-reg" id="legal-button" data-slug="legal" data-parent="false" data-title="Legal" data-group="1">Legal</button></li>
                                     <li class="filter-item"><button class="filter-button noto-sans-reg" id="research-button" data-slug="research" data-parent="false" data-title="Research" data-group="2">Research</button></li>
                                     <li class="filter-item"><button class="filter-button noto-sans-reg" id="industry-button" data-slug="industry" data-parent="false" data-title="Industry" data-group="3">Industry</button></li>
                                     <li class="filter-item"><button class="filter-button noto-sans-reg" id="events-button" data-slug="events" data-parent="false" data-title="Events" data-group="4">Events</button></li>
+                                </ul>
+                                <div class="tab-item"></div>
+                                <ul class="tab-item loc-tabs">
                                     <li class="filter-item"><button class="filter-button noto-sans-reg" id="us-button" data-slug="us" data-parent="false" data-title="US" data-group="5">U.S.</button></li>
                                     <li class="filter-item"><button class="filter-button noto-sans-reg" id="international-button" data-slug="international" data-parent="false" data-title="International" data-group="6">International</button></li>
                                 </ul>
                             
                             </div>
                         </div>
-                    
                     </div>
                 </div>
             </div>
@@ -68,16 +70,16 @@
 
                     <div class="right">
                         <div class="filter-drop">
-                            <button class="filter-drop-button drop-button">
+                            <button class="filter-drop-button drop-button" filter-button>
                                 <i class="filter-icon">
-                                    <img src="./svg/filter.svg" class="filter-svg"/>
+                                    <img src="./svg/funnel-white.svg" class="filter-svg" filter-icon/>
                                 </i>
                             </button>
                         </div>
                         <div class="search-drop">
-                            <button class="search-drop-button drop-button">
+                            <button class="search-drop-button drop-button" search-button>
                                 <i class="search-icon">
-                                    <img src="./img/search.svg" class="search-svg"/>
+                                    <img src="./svg/search-white.svg" class="search-svg" search-icon/>
                                 </i>
                             </button>
                         </div>
@@ -85,6 +87,32 @@
                     </div>
                 </div>
 
+                <div class="bottom bottom-drop">
+                    <div class="filter-outer filter-outer-drop hide" filter-window>
+                        <div class="filter-inner">
+                            <div class="filter-tabs filter-tabs-drop">
+                                <ul class="cat-tabs">
+                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="legal-button-drop" data-slug="legal" data-parent="false" data-title="Legal" data-group="1">Legal</button></li>
+                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="research-button-drop" data-slug="research" data-parent="false" data-title="Research" data-group="2">Research</button></li>
+                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="industry-button-drop" data-slug="industry" data-parent="false" data-title="Industry" data-group="3">Industry</button></li>
+                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="events-button-drop" data-slug="events" data-parent="false" data-title="Events" data-group="4">Events</button></li>
+                                
+                                </ul>
+                                <ul class="loc-tabs">
+                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="us-button-drop" data-slug="us" data-parent="false" data-title="US" data-group="5">U.S.</button></li>
+                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="international-button-drop" data-slug="international" data-parent="false" data-title="International" data-group="6">International</button></li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search search-container-drop hide" search-window>
+                        <form class="search-box search-box-drop" search-box search0box-drop>
+                            <input type="search" name="s" id="s-drop" class="search-input" placeholder="Search..." search search-drop>
+                        </form>
+                    </div>
+                </div>
                 
             </div>
         </header>
