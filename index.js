@@ -29,6 +29,12 @@ const internationalButton = document.querySelector("#international-button")
 const internationalButtonDrop = document.querySelector("#international-button-drop")
 
 
+
+
+
+
+
+
 let articles = []
 
 let filterDropOpen = false;
@@ -56,6 +62,7 @@ fetch("./articles.json")
         const categoryTag = card.querySelector("[category-tag]")
         const locationTag = card.querySelector("[location-tag]")
         const title = card.querySelector("[cell-title]")
+        const description = card.querySelector("[cell-description]")
 
         logo.src = article.image
         categoryTag.textContent = article.category
@@ -66,8 +73,13 @@ fetch("./articles.json")
         locationTag.classList.add(locClass)
         title.textContent = article.title 
 
+        description.textContent = article.description
+
+        card.addEventListener("click", () => {
+            card.classList.toggle('is-flipped')
+        })
         cardContainer.append(card)
-        return { image: article.image, category: article.category, location: article.location, title: article.title, element: card }
+        return { image: article.image, category: article.category, location: article.location, title: article.title, description: article.description, element: card }
     })
 })
 
@@ -656,6 +668,9 @@ searchInputDrop.addEventListener("input", e => {
 
     refreshGrid()
 })
+
+
+
 
 
 
