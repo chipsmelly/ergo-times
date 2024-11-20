@@ -112,12 +112,11 @@ div {
     background-color: #232323;
 }
 
+/* Controls the media querying - decides which version of the nav bar shows up
+    depending on the screen size */
+
 .header-lg {
     display: flex;
-}
-
-.header-md {
-    display: none;
 }
 
 .header-sm {
@@ -138,11 +137,39 @@ div {
     }
 }
 
+/* Nav bar elements:
+    Organized by 
+
+        nav 
+            large version
+                top 
+                    left
+                        logo
+                    right
+                        search bar
+                bottom
+                    filter buttons
+            small version (mobile)
+                top
+                    left
+                        logo
+                    right
+                        filter dropdown button
+                        search dropdown button
+                bottom 
+                    filter dropdown window
+                        filter buttons
+                    search dropdown window
+                        search bar
+*/
+
 .nav {
     width: calc(100% - 100px);
     max-width: 1440px;
     margin: auto;
 }
+
+/* Top section of large nav bar */
 
 .top {
     display: flex;
@@ -181,29 +208,12 @@ div {
 
 .right {
     display: flex;
+    gap: 10px;
 }
 
-.top button {
-    border-left: 0;
-    cursor: pointer;
-    font-size: 10px;
-    right: 0px;
-    top: 0px;
-    width: 40px;
-    border-radius: 3%;
-    padding: 0px 0px 0px;
-    border: 0;
-    margin: 0;
-    margin-left: 5px;
-    line-height: 25px;
-    height: calc(100%-6px);
-    background: #232323;
+.right img {
+    margin-top: 4px;
 }
-
-.filter-drop {
-    margin-right: 10px;
-}
-
 
 .search {
     display: flex;
@@ -213,25 +223,16 @@ div {
     align-items: center;
 }
 
-.search-container-drop {
-    margin-bottom: 15px;
-}
-
 .search-box {
     height: 36px;
     width: 180px;
     position: relative;
-
     background-color: #353535;
 }
 
-.search-box-drop {
-    width: 100%;
-
-}
 
 .search-input {
-    border-radius: 3%;
+    border-radius: 1%;
     width: 100%;
     margin-right:0;
     padding: 5px 10px 4px;
@@ -243,46 +244,7 @@ div {
     background-color: #353535;
 }
 
-
 /* Bottom section of the nav bar */
-.filter-tabs {
-    display: flex;
-}
-
-ul {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
-}
-
-.cat-tabs {
-    width: 70%;
-}
-
-div.tab-item {
-    background-color: white;
-    width: 1px;
-}
-
-.loc-tabs {
-    width: 30%;
-}
-
-
-li {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
 
 .bottom {
     opacity: 1;
@@ -301,11 +263,59 @@ li {
     position: static;
 }
 
+.filter-tabs {
+    display: flex;
+    gap: 5px;
+}
+
+ul {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.cat-tabs {
+    width: 70%;
+}
+
+.help-container {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    width: 30px;
+}
+
+.help-container img {
+    width: 20px;
+}
+
+
+.loc-tabs {
+    width: 30%;
+}
+
+li {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .filter-item {
     display: block;
     flex-grow: 1;
     text-align: center;
-    margin-right: 5px;
+    margin-right: 0px;
 }
 
 .filter-button {
@@ -326,7 +336,35 @@ li {
     width: 100%;
 }
 
+/* This is for the mobile version - header-sm */
+
+.filter-drop {
+    margin-right: 10px;
+}
+
+.top button, .help-button {
+    border-left: 0;
+    cursor: pointer;
+    font-size: 10px;
+    right: 0px;
+    top: 0px;
+    width: 40px;
+    border-radius: 1%;
+    padding: 0px 0px 0px;
+    border: 0;
+    margin: 0;
+    line-height: 25px;
+    height: calc(100%-6px);
+    background: #232323;
+}
+
+.top button {
+    margin-left: 5px;
+}
+
 /* The drop down section of the mobile nav bar */
+
+/* First part is for the filter buttons. */
 
 .filter-tabs-drop {
     display: flex;
@@ -344,18 +382,24 @@ li {
 }
 
 .filter-item-drop {
-    min-width: 200px;
-    flex
+    min-width: 150px;
 }
 
+/* Second part is for the Search bar. */
 
+.search-container-drop {
+    margin-bottom: 15px;
+}
 
-/* .filter-button:hover {
-    background-color: #242424;
-} */
+.search-box-drop {
+    width: 100%;
+}
+
+/* Extra classes for the filter buttons. These are added to and removed from
+    each button element with JS to add relevant hover states */
 
 .hover-active {
-    background-color: #218121
+    background-color: #218121;
 }
 
 .hover-inactive {
@@ -406,7 +450,7 @@ li {
     border-radius: 4%;
     text-decoration: none;
 
-    border: limegreen 3px solid;
+    border: #232323 3px solid;
     background-color: white;
 }
 
@@ -429,9 +473,6 @@ li {
     justify-content: space-between;
 }
 
-.cell-inner > * {
-    /* border: green 1px solid; */
-}
 
 .card-item {
     /* border: gold 1px solid; */
@@ -448,7 +489,7 @@ li {
 .cell-logo > * {
     width: 90%;
     padding: 2%;
-    border: red 2px solid;
+    border: #595959 2px solid;
     /* border-radius: 10%; */
     background-color: white;
 }
@@ -481,7 +522,7 @@ li {
     padding-top: 1%;
     padding-bottom: 1%;
 
-    border: red 2px solid;
+    border: #595959 2px solid;
     background-color: white;
     color: rgb(41, 41, 41);
     font-size: 12px;
@@ -501,6 +542,8 @@ li {
 .filter-container {
     display: none;
 }
+
+/* Media query section for the main content grid */
 
 @media (max-width: 1100px) {
     .title {

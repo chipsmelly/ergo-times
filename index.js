@@ -47,7 +47,6 @@ let locationFilter = false;
 let searchValue = "";
 
 
-
 fetch("./articles.json")
 .then(res => res.json())
 .then(data => {
@@ -71,6 +70,15 @@ fetch("./articles.json")
         return { image: article.image, category: article.category, location: article.location, title: article.title, element: card }
     })
 })
+
+
+
+
+
+
+
+
+
 
 
 filterButton.addEventListener("click", function () {
@@ -99,10 +107,48 @@ searchButton.addEventListener("click", function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 legalButton.addEventListener("click", function () {
     if (legal === false) {
 
         legal = true;
+        activateButton(legalButton)
+        activateButton(legalButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+        
+        legal = false;
+        deactivateButton(legalButton)
+        deactivateButton(legalButtonDrop)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+legalButtonDrop.addEventListener("click", function () {
+    if (legal === false) {
+
+        legal = true;
+        activateButton(legalButtonDrop)
         activateButton(legalButton)
 
         if (categoryFilter === false) {
@@ -112,6 +158,7 @@ legalButton.addEventListener("click", function () {
     } else {
         
         legal = false;
+        deactivateButton(legalButtonDrop)
         deactivateButton(legalButton)
 
         if (research === false && events === false && industry === false) {
@@ -122,6 +169,272 @@ legalButton.addEventListener("click", function () {
 
     refreshGrid()
 } )
+
+researchButton.addEventListener("click", function () {
+    if (research === false) {
+
+        research = true;
+        activateButton(researchButton)
+        activateButton(researchButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+
+        research = false;
+        deactivateButton(researchButton)
+        deactivateButton(researchButtonDrop)
+
+        if (legal === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+researchButtonDrop.addEventListener("click", function () {
+    if (research === false) {
+
+        research = true;
+        activateButton(researchButtonDrop)
+        activateButton(researchButton)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+
+        research = false;
+        deactivateButton(researchButtonDrop)
+        deactivateButton(researchButton)
+
+        if (legal === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+industryButton.addEventListener("click", function () {
+    if (industry === false) {
+
+        industry = true;
+        activateButton(industryButton)
+        activateButton(industryButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+
+        industry = false;
+        deactivateButton(industryButton)
+        deactivateButton(industryButtonDrop)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+industryButtonDrop.addEventListener("click", function () {
+    if (industry === false) {
+
+        industry = true;
+        activateButton(industryButtonDrop)
+        activateButton(industryButton)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+
+    } else {
+
+        industry = false;
+        deactivateButton(industryButtonDrop)
+        deactivateButton(industryButton)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+eventsButton.addEventListener("click", function () {
+    if (events === false) {
+
+        events = true;
+        activateButton(eventsButton)
+        activateButton(eventsButtonDrop)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+        
+    } else {
+
+        events = false;
+        deactivateButton(eventsButton)
+        deactivateButton(eventsButtonDrop)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+eventsButtonDrop.addEventListener("click", function () {
+    if (events === false) {
+
+        events = true;
+        activateButton(eventsButtonDrop)
+        activateButton(eventsButton)
+
+        if (categoryFilter === false) {
+            categoryFilter = true;
+        }
+        
+    } else {
+
+        events = false;
+        deactivateButton(eventsButtonDrop)
+        deactivateButton(eventsButton)
+
+        if (research === false && events === false && industry === false) {
+            categoryFilter = false;
+        }
+
+    }
+
+    refreshGrid()
+} )
+
+usButton.addEventListener("click", function () {
+    if (us === false) {
+
+        us = true;
+        activateButton(usButton)
+        activateButton(usButtonDrop)
+
+        if (international === true) {
+            international = false
+            deactivateButton(internationalButton)
+            deactivateButton(internationalButtonDrop)
+        } else {
+            locationFilter = true
+        }
+
+    } else {
+        us = false;
+        deactivateButton(usButton)
+        deactivateButton(usButtonDrop)
+
+        locationFilter = false
+    }
+
+    refreshGrid()
+} )
+
+usButtonDrop.addEventListener("click", function () {
+    if (us === false) {
+
+        us = true;
+        activateButton(usButtonDrop)
+        activateButton(usButton)
+
+        if (international === true) {
+            international = false
+            deactivateButton(internationalButtonDrop)
+            deactivateButton(internationalButton)
+        } else {
+            locationFilter = true
+        }
+
+    } else {
+        us = false;
+        deactivateButton(usButtonDrop)
+        deactivateButton(usButton)
+
+        locationFilter = false
+    }
+
+    refreshGrid()
+} )
+
+internationalButton.addEventListener("click", function () {
+    if (international === false) {
+
+        international = true
+        activateButton(internationalButton)
+        activateButton(internationalButtonDrop)
+        
+        if (us === true) {
+            us = false
+            deactivateButton(usButton)
+            deactivateButton(usButtonDrop)
+        } else {
+            locationFilter = true;
+        }
+
+    } else {
+        international = false
+        deactivateButton(internationalButton)
+        deactivateButton(internationalButtonDrop)
+        locationFilter = false
+    }
+
+    refreshGrid()
+} )
+
+internationalButtonDrop.addEventListener("click", function () {
+    if (international === false) {
+
+        international = true
+        activateButton(internationalButtonDrop)
+        activateButton(internationalButton)
+        
+        if (us === true) {
+            us = false
+            deactivateButton(usButtonDrop)
+            deactivateButton(usButton)
+        } else {
+            locationFilter = true;
+        }
+
+    } else {
+        international = false
+        deactivateButton(internationalButtonDrop)        
+        deactivateButton(internationalButton)
+
+        locationFilter = false
+    }
+
+    refreshGrid()
+} )
+
+
+
+
+
+
+
 
 legalButton.addEventListener("mouseover", () => {
     if (legal === true) {
@@ -139,30 +452,6 @@ legalButton.addEventListener("mouseout", () => {
     }
 })
 
-legalButtonDrop.addEventListener("click", function () {
-    if (legal === false) {
-
-        legal = true;
-        activateButton(legalButtonDrop)
-
-        if (categoryFilter === false) {
-            categoryFilter = true;
-        }
-
-    } else {
-        
-        legal = false;
-        deactivateButton(legalButtonDrop)
-
-        if (research === false && events === false && industry === false) {
-            categoryFilter = false;
-        }
-
-    }
-
-    refreshGrid()
-} )
-
 legalButtonDrop.addEventListener("mouseover", () => {
     if (legal === true) {
         legalButtonDrop.style.backgroundColor = "#218221"
@@ -178,30 +467,6 @@ legalButtonDrop.addEventListener("mouseout", () => {
         legalButtonDrop.style.backgroundColor = "#353535"
     }
 })
-
-researchButton.addEventListener("click", function () {
-    if (research === false) {
-
-        research = true;
-        activateButton(researchButton)
-
-        if (categoryFilter === false) {
-            categoryFilter = true;
-        }
-
-    } else {
-
-        research = false;
-        deactivateButton(researchButton)
-
-        if (legal === false && events === false && industry === false) {
-            categoryFilter = false;
-        }
-
-    }
-
-    refreshGrid()
-} )
 
 researchButton.addEventListener("mouseover", () => {
     if (research === true) {
@@ -219,30 +484,6 @@ researchButton.addEventListener("mouseout", () => {
     }
 })
 
-researchButtonDrop.addEventListener("click", function () {
-    if (research === false) {
-
-        research = true;
-        activateButton(researchButtonDrop)
-
-        if (categoryFilter === false) {
-            categoryFilter = true;
-        }
-
-    } else {
-
-        research = false;
-        deactivateButton(researchButtonDrop)
-
-        if (legal === false && events === false && industry === false) {
-            categoryFilter = false;
-        }
-
-    }
-
-    refreshGrid()
-} )
-
 researchButtonDrop.addEventListener("mouseover", () => {
     if (research === true) {
         researchButtonDrop.style.backgroundColor = "#218221"
@@ -258,30 +499,6 @@ researchButtonDrop.addEventListener("mouseout", () => {
         researchButtonDrop.style.backgroundColor = "#353535"
     }
 })
-
-industryButton.addEventListener("click", function () {
-    if (industry === false) {
-
-        industry = true;
-        activateButton(industryButton)
-
-        if (categoryFilter === false) {
-            categoryFilter = true;
-        }
-
-    } else {
-
-        industry = false;
-        deactivateButton(industryButton)
-
-        if (research === false && events === false && industry === false) {
-            categoryFilter = false;
-        }
-
-    }
-
-    refreshGrid()
-} )
 
 industryButton.addEventListener("mouseover", () => {
     if (industry === true) {
@@ -299,30 +516,6 @@ industryButton.addEventListener("mouseout", () => {
     }
 })
 
-industryButtonDrop.addEventListener("click", function () {
-    if (industry === false) {
-
-        industry = true;
-        activateButton(industryButtonDrop)
-
-        if (categoryFilter === false) {
-            categoryFilter = true;
-        }
-
-    } else {
-
-        industry = false;
-        deactivateButton(industryButtonDrop)
-
-        if (research === false && events === false && industry === false) {
-            categoryFilter = false;
-        }
-
-    }
-
-    refreshGrid()
-} )
-
 industryButtonDrop.addEventListener("mouseover", () => {
     if (industry === true) {
         industryButtonDrop.style.backgroundColor = "#218221"
@@ -338,30 +531,6 @@ industryButtonDrop.addEventListener("mouseout", () => {
         industryButtonDrop.style.backgroundColor = "#353535"
     }
 })
-
-eventsButton.addEventListener("click", function () {
-    if (events === false) {
-
-        events = true;
-        activateButton(eventsButton)
-
-        if (categoryFilter === false) {
-            categoryFilter = true;
-        }
-        
-    } else {
-
-        events = false;
-        deactivateButton(eventsButton)
-
-        if (research === false && events === false && industry === false) {
-            categoryFilter = false;
-        }
-
-    }
-
-    refreshGrid()
-} )
 
 eventsButton.addEventListener("mouseover", () => {
     if (events === true) {
@@ -379,30 +548,6 @@ eventsButton.addEventListener("mouseout", () => {
     }
 })
 
-eventsButtonDrop.addEventListener("click", function () {
-    if (events === false) {
-
-        events = true;
-        activateButton(eventsButtonDrop)
-
-        if (categoryFilter === false) {
-            categoryFilter = true;
-        }
-        
-    } else {
-
-        events = false;
-        deactivateButton(eventsButtonDrop)
-
-        if (research === false && events === false && industry === false) {
-            categoryFilter = false;
-        }
-
-    }
-
-    refreshGrid()
-} )
-
 eventsButtonDrop.addEventListener("mouseover", () => {
     if (events === true) {
         eventsButtonDrop.style.backgroundColor = "#218221"
@@ -418,28 +563,6 @@ eventsButtonDrop.addEventListener("mouseout", () => {
         eventsButtonDrop.style.backgroundColor = "#353535"
     }
 })
-
-usButton.addEventListener("click", function () {
-    if (us === false) {
-
-        us = true;
-        activateButton(usButton)
-
-        if (international === true) {
-            international = false
-            deactivateButton(internationalButton)
-        } else {
-            locationFilter = true
-        }
-
-    } else {
-        us = false;
-        deactivateButton(usButton)
-        locationFilter = false
-    }
-
-    refreshGrid()
-} )
 
 usButton.addEventListener("mouseover", () => {
     if (us === true) {
@@ -457,28 +580,6 @@ usButton.addEventListener("mouseout", () => {
     }
 })
 
-usButtonDrop.addEventListener("click", function () {
-    if (us === false) {
-
-        us = true;
-        activateButton(usButtonDrop)
-
-        if (international === true) {
-            international = false
-            deactivateButton(internationalButtonDrop)
-        } else {
-            locationFilter = true
-        }
-
-    } else {
-        us = false;
-        deactivateButton(usButtonDrop)
-        locationFilter = false
-    }
-
-    refreshGrid()
-} )
-
 usButtonDrop.addEventListener("mouseover", () => {
     if (us === true) {
         usButtonDrop.style.backgroundColor = "#218221"
@@ -495,28 +596,6 @@ usButtonDrop.addEventListener("mouseout", () => {
     }
 })
 
-internationalButton.addEventListener("click", function () {
-    if (international === false) {
-
-        international = true
-        activateButton(internationalButton)
-        
-        if (us === true) {
-            us = false
-            deactivateButton(usButton)
-        } else {
-            locationFilter = true;
-        }
-
-    } else {
-        international = false
-        deactivateButton(internationalButton)
-        locationFilter = false
-    }
-
-    refreshGrid()
-} )
-
 internationalButton.addEventListener("mouseover", () => {
     if (international === true) {
         internationalButton.style.backgroundColor = "#218221"
@@ -532,28 +611,6 @@ internationalButton.addEventListener("mouseout", () => {
         internationalButton.style.backgroundColor = "#353535"
     }
 })
-
-internationalButtonDrop.addEventListener("click", function () {
-    if (international === false) {
-
-        international = true
-        activateButton(internationalButtonDrop)
-        
-        if (us === true) {
-            us = false
-            deactivateButton(usButtonDrop)
-        } else {
-            locationFilter = true;
-        }
-
-    } else {
-        international = false
-        deactivateButton(internationalButtonDrop)
-        locationFilter = false
-    }
-
-    refreshGrid()
-} )
 
 internationalButtonDrop.addEventListener("mouseover", () => {
     if (international === true) {
@@ -573,17 +630,37 @@ internationalButtonDrop.addEventListener("mouseout", () => {
 
 
 
+
+
+
+
+
 searchInput.addEventListener("input", e => {
+
+    console.log(e.target.value.toLowerCase())
+
     searchValue = e.target.value.toLowerCase()
+    searchInputDrop.value = searchValue
+    searchInput.value - searchValue
 
     refreshGrid()
 })
 
 searchInputDrop.addEventListener("input", e => {
+
+    console.log(e.target.value.toLowerCase())
+
     searchValue = e.target.value.toLowerCase()
+    searchInput.value = searchValue
+    searchInputDrop.value = searchValue
 
     refreshGrid()
 })
+
+
+
+
+
 
 
 
@@ -598,6 +675,12 @@ function deactivateButton(button) {
     button.style.backgroundColor = "#353535"
     button.style.color = "white"
 }
+
+
+
+
+
+
 
 function refreshGrid() {
 
@@ -639,3 +722,8 @@ function refreshGrid() {
         article.element.classList.toggle("hide", !isVisible)
     })
 }
+
+
+
+
+
