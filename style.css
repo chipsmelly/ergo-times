@@ -500,9 +500,9 @@ li {
 }
 
 .is-flipped img {
-    animation-delay: 0.8s;
     opacity: 0;
 }
+
 
 .cell-logo {
     height: 40%;
