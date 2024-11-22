@@ -499,6 +499,10 @@ li {
     transform: rotateY(180deg);
 }
 
+.is-flipped img {
+    opacity: 0;
+}
+
 .cell-logo {
     height: 40%;
     display: flex;
