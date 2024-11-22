@@ -500,7 +500,7 @@ li {
 }
 
 .is-flipped img {
-    opacity: 0;
+    z-index: 1;
 }
 
 .cell-logo {
