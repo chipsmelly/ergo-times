@@ -500,7 +500,8 @@ li {
 }
 
 .is-flipped img {
-    z-index: 1;
+    animation-delay: 0.8s;
+    opacity: 0;
 }
 
 .cell-logo {
