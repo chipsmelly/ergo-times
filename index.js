@@ -80,7 +80,18 @@ fetch("./articles.json")
 
         card.addEventListener("click", () => {
             card.classList.toggle('is-flipped')
+            // card.classList.toggle('is-invis')
+            if (!card.classList.contains('is-invis')) {
+                // card.classList.toggle('is-invis')
+                setTimeout (() => {
+                    card.classList.toggle('is-invis')
+                }, 200)
+            } else {
+                card.classList.toggle('is-invis')
+            }
         })
+
+
         cardContainer.append(card)
         return { image: article.image, category: article.category, location: article.location, title: article.title, description: article.description, link: article.link, element: card }
     })

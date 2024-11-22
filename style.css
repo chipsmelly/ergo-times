@@ -499,10 +499,13 @@ li {
     transform: rotateY(180deg);
 }
 
-.is-flipped img {
+/* .is-flipped img {
+    opacity: 0;
+} */
+
+.is-invis img {
     opacity: 0;
 }
-
 
 .cell-logo {
     height: 40%;
