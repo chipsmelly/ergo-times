@@ -4,41 +4,47 @@
         "location": "US",
         "category": "Research",
         "image": "./img/ehstoday-logo.webp",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a laoreet augue. Aenean tincidunt in nibh vel fermentum. In a diam ac nunc placerat pellentesque. Donec sollicitudin faucibus turpis vel pretium."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a laoreet augue. Aenean tincidunt in nibh vel fermentum. In a diam ac nunc placerat pellentesque. Donec sollicitudin faucibus turpis vel pretium.",
+        "link": "https://www.ehstoday.com/health/article/21242004/half-of-all-americans-have-msk-pain"
     },
     {
         "title": "OSHA announced funding opportunities for $11 Million in grants through its Susan Harwood Training Grants Program",
         "location": "US",
         "category": "Legal",
         "image": "./img/OSHA-logo-.webp",
-        "description": "Fusce vestibulum mauris id leo gravida dapibus. Cras iaculis at ipsum pretium mollis. Pellentesque tristique odio eros, id venenatis mauris dignissim ut."
+        "description": "Fusce vestibulum mauris id leo gravida dapibus. Cras iaculis at ipsum pretium mollis. Pellentesque tristique odio eros, id venenatis mauris dignissim ut.",
+        "link": "https://www.osha.gov/harwoodgrants"
     },
     {
         "title": "OSHA Launches National Emphasis Program to Expand on Heat Illness Prevention Campaign",
         "location": "US",
         "category": "Legal",
         "image": "./img/national-law-logo.webp",
-        "description": "Aenean in tempor nisi. Donec vitae blandit justo. Vivamus congue tincidunt nisl, sit amet pulvinar lectus malesuada sed."
+        "description": "Aenean in tempor nisi. Donec vitae blandit justo. Vivamus congue tincidunt nisl, sit amet pulvinar lectus malesuada sed.",
+        "link": "https://natlawreview.com/article/osha-launches-national-emphasis-program-to-expand-heat-illness-prevention-campaign"
     },
     {
         "title": "2022 NSC Safety Congress & Expo",
         "location": "US",
         "category": "Events",
         "image": "./img/nsc-logo.webp",
-        "description": "Donec consectetur sed libero sit amet vestibulum. Pellentesque vestibulum cursus neque nec ullamcorper. Sed ut mauris ac nulla efficitur ornare in non diam."
+        "description": "Donec consectetur sed libero sit amet vestibulum. Pellentesque vestibulum cursus neque nec ullamcorper. Sed ut mauris ac nulla efficitur ornare in non diam.",
+        "link": "https://congress.nsc.org/nsc2025/public/enter.aspx"
     },
     {
         "title": "National Safety Council, Amazon and Top Industry Employers Pledge to Reduce Workplace Injuries by 25% by 2025",
         "location": "US",
         "category": "Research",
         "image": "./img/nsc-logo-2.webp",
-        "description": "Praesent sodales aliquet semper. Mauris commodo, quam vitae iaculis vulputate, mauris metus volutpat nunc, sit amet lacinia erat velit a purus. Aliquam eget lacinia mauris. Suspendisse sed tellus nec augue condimentum finibus."
+        "description": "Praesent sodales aliquet semper. Mauris commodo, quam vitae iaculis vulputate, mauris metus volutpat nunc, sit amet lacinia erat velit a purus. Aliquam eget lacinia mauris. Suspendisse sed tellus nec augue condimentum finibus.",
+        "link": "https://www.prnewswire.com/news-releases/national-safety-council-amazon-and-top-industry-employers-pledge-to-reduce-workplace-injuries-by-25-by-2025-301560449.html"
     },
     {
         "title": "Amid criticism of workplace injuries, Amazon signs a new safety pledge",
         "location": "US",
         "category": "Industry",
         "image": "./img/seattle-times-logo.webp",
-        "description": "Fusce gravida lorem in sodales consequat. Etiam accumsan nulla eros, sed consequat diam euismod id. Integer sed imperdiet sem, a pretium neque."
+        "description": "Fusce gravida lorem in sodales consequat. Etiam accumsan nulla eros, sed consequat diam euismod id. Integer sed imperdiet sem, a pretium neque.",
+        "link": "https://www.seattletimes.com/business/amid-criticism-of-workplace-injuries-amazon-signs-a-new-safety-pledge/"
     }
 ]

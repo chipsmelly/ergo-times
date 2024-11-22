@@ -123,7 +123,7 @@ div {
     display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
     .header-lg {
         display: none;
     }
@@ -136,6 +136,8 @@ div {
         display: flex;
     }
 }
+
+
 
 /* Nav bar elements:
     Organized by 
@@ -174,7 +176,7 @@ div {
 .top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 20px 0 0;
     margin-bottom: 15px;
 }
@@ -187,6 +189,7 @@ div {
     align-items: normal;
     padding-right: 10px;
 }
+
 
 .logo {
     top: 1px;
@@ -382,7 +385,7 @@ li {
 }
 
 .filter-item-drop {
-    min-width: 150px;
+    min-width: 120px;
 }
 
 /* Second part is for the Search bar. */
@@ -406,11 +409,18 @@ li {
     background-color: #242424;
 }
 
+
+
+
+
+
+
 /* grid for main content  */
+
+
 
 .content-area {
     min-height: calc(100vh - 190px);
-
     margin-top: 0;
 }
 
@@ -422,45 +432,27 @@ li {
 
 .grid {
 
-    /* border: red 1px solid; */
-
     display: grid;
     grid-auto-flow: dense;
-
-    grid-gap: 10px;
-
+    grid-gap: 12px;
     grid-template-columns: 1fr 1fr 1fr;
-
-    margin: 0 0 40px;
+    margin: 0 19px 40px 0px;
     padding-top: 20px;
     position: relative;
     
 }
 
 .cell-outer {
-    /* border: purple 1px solid; */
-
     display: block;
     position: relative;
-
     margin-bottom: 0;
-
     aspect-ratio: 1;
-
     border-radius: 4%;
     text-decoration: none;
-
-    /* border: #232323 3px solid; */
     cursor: pointer;
 }
 
-/* .cell-outer:hover {
-    background-color: rgb(211, 211, 211);
-} */
-
 .cell-inner {
-    /* border: blue 1px solid; */
-    
     border: #232323 3px solid;
     border-radius: 4%;
     background-color: white;
@@ -470,16 +462,9 @@ li {
     /* width: 90%; */
     /* margin-left: 5%; */
     /* margin-top: 5%; */
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-
-}
-
-
-.cell-inner {
     transform-style: preserve-3d;
     transition: all 0.8s ease;
     height: 100%;
@@ -501,28 +486,17 @@ li {
     position: absolute;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    background-color: white;
+    background-color: #d6d6d6;
     height: 100%;
     width: 100%;
     border-radius: 3%;
-
     display: flex;
     flex-direction: column;
-    justify-content: space-between;;
+    justify-content: space-between;
 }
 
 .is-flipped .cell-inner{
     transform: rotateY(180deg);
-}
-
-
-
-
-
-
-.card-item {
-    /* border: gold 1px solid; */
-    /* margin: 10px; */
 }
 
 .cell-logo {
@@ -536,8 +510,7 @@ li {
 .cell-logo > * {
     width: 90%;
     padding: 2%;
-    border: #595959 2px solid;
-    /* border-radius: 10%; */
+    /* border: #595959 2px solid; */
     background-color: white;
 }
 
@@ -546,15 +519,14 @@ li {
     height: 45%;
     padding-left: 2%;
     padding-right: 2%;
-
     color: black;
-
     text-align: left;
     display: inline-block;
     width: 95%;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .cell-tag {
     height: 25px;
     padding-left: 2.5%;
@@ -576,16 +548,9 @@ li {
     font-size: 12px;
 }
 
-.date {
-    display: inline;
-}
-
-.author {
-    display: inline;
-}
-
 .cell-description {
     margin: 3%;
+    height: 70%
 }
 
 .cell-button {
@@ -593,14 +558,31 @@ li {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-}
 
-.article-button {
     
 }
 
+.cell-button > a {
+    padding: 8px 12px;
+    font-weight: 700;
+    line-height: 25px;
 
+    color: white;
+    background-color: #757575;
+    border: #ffffff solid 1px;
 
+    cursor: pointer;
+    font-size: 12px;
+    margin-bottom: 5px;
+    position: relative;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 3%;
+}
+
+.cell-button > a:hover {
+    background-color: #d6d6d6;
+}
 
 .filter-container {
     display: none;
@@ -625,6 +607,7 @@ li {
 @media (max-width: 1000px) {
     .grid {
         grid-template-columns: 1fr 1fr;
+        margin: 0 15px 40px 0;
     }
 
 
@@ -653,6 +636,7 @@ li {
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
+        margin: 0 11px 40px 0;
     }
 
     .title {
@@ -660,9 +644,36 @@ li {
     }
 }
 
+@media (max-width: 550px) {
+    .content-container {
+        width: calc(100% - 20px);
+    }
+
+    .nav {
+        width: calc(100% - 20px);
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
 @media (max-width: 400px) {
     .title {
         font-size: 14px
+    }
+
+    .logo > h2 {
+        display: none;
+    }
+}
+
+@media (max-width: 315px) {
+
+    .right {
+        display: flex;
+        gap: 0px;
+    }
+    .filter-drop {
+        margin-right: 0px;
     }
 }
 

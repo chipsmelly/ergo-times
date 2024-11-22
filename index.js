@@ -53,6 +53,7 @@ let locationFilter = false;
 let searchValue = "";
 
 
+
 fetch("./articles.json")
 .then(res => res.json())
 .then(data => {
@@ -63,6 +64,7 @@ fetch("./articles.json")
         const locationTag = card.querySelector("[location-tag]")
         const title = card.querySelector("[cell-title]")
         const description = card.querySelector("[cell-description]")
+        const link = card.querySelector("[cell-button]")
 
         logo.src = article.image
         categoryTag.textContent = article.category
@@ -74,12 +76,13 @@ fetch("./articles.json")
         title.textContent = article.title 
 
         description.textContent = article.description
+        link.setAttribute("href", article.link) 
 
         card.addEventListener("click", () => {
             card.classList.toggle('is-flipped')
         })
         cardContainer.append(card)
-        return { image: article.image, category: article.category, location: article.location, title: article.title, description: article.description, element: card }
+        return { image: article.image, category: article.category, location: article.location, title: article.title, description: article.description, link: article.link, element: card }
     })
 })
 
@@ -702,7 +705,7 @@ function refreshGrid() {
     articles.forEach(article => {
         let isVisible = false;
 
-        if (article.title.toLowerCase().includes(searchValue)) {
+        if (article.title.toLowerCase().includes(searchValue) || article.description.toLowerCase().includes(searchValue)) {
             if (categoryFilter === true) {
                 if (legal === true && article.category.toLowerCase().includes("legal")) {
                     isVisible = true
