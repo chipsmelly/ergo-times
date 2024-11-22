@@ -391,7 +391,8 @@ li {
 /* Second part is for the Search bar. */
 
 .search-container-drop {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
+    margin-top: 30px;
 }
 
 .search-box-drop {

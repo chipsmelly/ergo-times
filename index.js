@@ -3,6 +3,9 @@
 const template = document.querySelector("[grid-template]")
 const cardContainer = document.querySelector("[card-container]")
 
+const menuButton = document.querySelector("[menu-button]")
+const menuIcon = document.querySelector("[menu-icon]")
+
 const filterButton = document.querySelector("[filter-button]")
 const filterIcon = document.querySelector("[filter-icon]")
 const filterWindow = document.querySelector("[filter-window]")
@@ -131,6 +134,23 @@ searchButton.addEventListener("click", function () {
     }
 })
 
+menuButton.addEventListener("click", function () {
+    if (filterDropOpen === false) {
+        filterDropOpen = true
+        searchDropOpen = true
+        filterWindow.classList.remove("hide")
+        searchWindow.classList.remove("hide")
+        menuIcon.src = "./svg/menu-gray.svg"
+    } else {
+        filterDropOpen = false
+        filterWindow.classList.add("hide")
+
+        searchDropOpen = false
+        searchWindow.classList.add("hide")
+
+        menuIcon.src = "./svg/menu-white.svg"
+    }
+})
 
 
 

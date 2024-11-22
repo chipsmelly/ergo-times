@@ -73,17 +73,25 @@
                     </div>
 
                     <div class="right">
-                        <div class="filter-drop">
+                        <div class="filter-drop hide">
                             <button class="filter-drop-button drop-button" filter-button>
                                 <i class="filter-icon">
                                     <img src="./svg/funnel-white.svg" class="filter-svg" filter-icon/>
                                 </i>
                             </button>
                         </div>
-                        <div class="search-drop">
+                        <div class="search-drop hide">
                             <button class="search-drop-button drop-button" search-button>
                                 <i class="search-icon">
                                     <img src="./svg/search-white.svg" class="search-svg" search-icon/>
+                                </i>
+                            </button>
+                        </div>
+
+                        <div class="menu-drop">
+                            <button class="menu-drop-button drop-button" menu-button>
+                                <i class="menu-icon">
+                                    <img src="./svg/menu-white.svg" class="menu-svg" menu-icon/>
                                 </i>
                             </button>
                         </div>
@@ -92,6 +100,13 @@
                 </div>
 
                 <div class="bottom bottom-drop">
+                    <div class="search search-container-drop hide" search-window>
+                        <form class="search-box search-box-drop" search-box search0box-drop>
+                            <input type="search" name="s" id="s-drop" class="search-input" placeholder="Search..." search search-drop>
+                        </form>
+                    </div>
+
+                    
                     <div class="filter-outer filter-outer-drop hide" filter-window>
                         <div class="filter-inner">
                             <div class="filter-tabs filter-tabs-drop">
@@ -111,11 +126,7 @@
                         </div>
                     </div>
 
-                    <div class="search search-container-drop hide" search-window>
-                        <form class="search-box search-box-drop" search-box search0box-drop>
-                            <input type="search" name="s" id="s-drop" class="search-input" placeholder="Search..." search search-drop>
-                        </form>
-                    </div>
+                    
                 </div>
                 
             </div>
