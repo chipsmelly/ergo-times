@@ -469,6 +469,14 @@ li {
     width: 100%;
 }
 
+.is-flipped .cell-inner{
+    transform: rotateY(180deg);
+}
+
+.is-invis img {
+    opacity: 0;
+}
+
 .card-front {
     position: absolute;
     backface-visibility: hidden;
@@ -477,28 +485,8 @@ li {
     border-radius: 4%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-.card-back {
-    position: absolute;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    background-color: #d6d6d6;
-    height: 100%;
-    width: 100%;
-    border-radius: 3%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-}
-
-.is-flipped .cell-inner{
-    transform: rotateY(180deg);
-}
-
-.is-invis img {
-    opacity: 0;
+    /* gap: 15px; */
 }
 
 .cell-logo {
@@ -517,25 +505,6 @@ li {
     padding-right: 8%; */
     /* border: #595959 2px solid; */
     background-color: white;
-}
-
-
-.cell-title {
-    /* height: 60%; */
-    padding-left: 8%;
-    padding-right: 8%;
-    color: black;
-    text-align: left;
-    display: inline-block;
-    /* width: 95%; */
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.cell-title h3 {
-    margin: 0px;
-    margin-top: 10px;
-    
 }
 
 .cell-tag {
@@ -559,6 +528,38 @@ li {
     font-size: 12px;
 }
 
+.cell-title {
+    /* height: 60%; */
+    padding-left: 8%;
+    padding-right: 8%;
+    color: black;
+    text-align: left;
+    display: inline-block;
+    /* width: 95%; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cell-title h3 {
+    margin: 0px;
+    margin-top: 10px;
+    
+}
+
+
+.card-back {
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: #d6d6d6;
+    height: 100%;
+    width: 100%;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .cell-description {
     margin: 3%;
     margin-left: 8%;
@@ -568,9 +569,11 @@ li {
 
 .cell-button {
     align-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     display: flex;
     justify-content: center; 
+
+    height: 40px;
 }
 
 .cell-button > a {
@@ -584,8 +587,10 @@ li {
 
     cursor: pointer;
     font-size: 12px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+
     position: relative;
+
     text-transform: capitalize;
     text-decoration: none;
     border-radius: 3%;

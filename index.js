@@ -67,7 +67,8 @@ fetch("./articles.json")
         const locationTag = card.querySelector("[location-tag]")
         const title = card.querySelector("[cell-title]")
         const description = card.querySelector("[cell-description]")
-        const link = card.querySelector("[cell-button]")
+        const linkFront = card.querySelector("[front-button]")
+        const linkBack = card.querySelector("[back-button]")
 
         logo.src = article.image
         categoryTag.textContent = article.category
@@ -79,7 +80,8 @@ fetch("./articles.json")
         title.textContent = article.title 
 
         description.textContent = article.description
-        link.setAttribute("href", article.link) 
+        linkFront.setAttribute("href", article.link) 
+        linkBack.setAttribute("href", article.link)
 
         card.addEventListener("click", () => {
             card.classList.toggle('is-flipped')
