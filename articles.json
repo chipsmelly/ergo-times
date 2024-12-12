@@ -1,50 +1,63 @@
 [
     {
-        "title": "Half of All Americans Have Musculoskeletal Pain",
-        "location": "US",
-        "category": "Research",
         "image": "./img/ehstoday-logo.webp",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a laoreet augue. Aenean tincidunt in nibh vel fermentum. In a diam ac nunc placerat pellentesque. Donec sollicitudin faucibus turpis vel pretium.",
+        "category": "Research",
+        "location": "US",
+        "title": "Half of All Americans Have Musculoskeletal Pain",
+        "source": "EHS Today Staff",
+        "date": "June 20, 2022",
+        "summary": "A new report reveals that half of all Americans suffer from musculoskeletal (MSK) pain, a leading cause of disability and work absenteeism. The study highlights that MSK conditions, such as back pain, affect people across all age groups, and the growing prevalence of these disorders is linked to factors like sedentary lifestyles and aging. The report emphasizes the need for preventive measures and better access to treatment to manage MSK pain and improve quality of life for those affected.",
         "link": "https://www.ehstoday.com/health/article/21242004/half-of-all-americans-have-msk-pain"
     },
     {
-        "title": "OSHA announced funding opportunities for $11 Million in grants through its Susan Harwood Training Grants Program",
-        "location": "US",
-        "category": "Legal",
         "image": "./img/OSHA-logo-.webp",
-        "description": "Fusce vestibulum mauris id leo gravida dapibus. Cras iaculis at ipsum pretium mollis. Pellentesque tristique odio eros, id venenatis mauris dignissim ut.",
+        "category": "Legal",
+        "location": "US",
+        "title": "OSHA announced funding opportunities for $11 Million in grants through its Susan Harwood Training Grants Program",
+        "source": "Occupational Safety and Health Administration",
+        "date": "June 17, 2022",        
+        "summary": "Fusce vestibulum mauris id leo gravida dapibus. Cras iaculis at ipsum pretium mollis. Pellentesque tristique odio eros, id venenatis mauris dignissim ut.",
         "link": "https://www.osha.gov/harwoodgrants"
     },
     {
-        "title": "OSHA Launches National Emphasis Program to Expand on Heat Illness Prevention Campaign",
-        "location": "US",
-        "category": "Legal",
         "image": "./img/national-law-logo.webp",
-        "description": "Aenean in tempor nisi. Donec vitae blandit justo. Vivamus congue tincidunt nisl, sit amet pulvinar lectus malesuada sed.",
+        "category": "Legal",
+        "location": "US",
+        "title": "OSHA Launches National Emphasis Program to Expand on Heat Illness Prevention Campaign",
+        "source": "R. Lance Witcher & Lauren E. Lenhart",
+        "date": "June 14, 2022",
+        "summary": "OSHA has launched a National Emphasis Program (NEP) to intensify efforts in preventing heat-related illnesses in the workplace, expanding on its heat illness prevention campaign. Effective from April 8, 2022, the NEP targets all industries, focusing particularly on sectors exposed to heat hazards, such as construction, agriculture, and manufacturing. It applies when outdoor temperatures exceed 80°F with 40% humidity or more. OSHA aims to increase inspections and heat-related citations, targeting high-risk workplaces during heat advisories or warnings.  The NEP includes both programmed and unprogrammed inspections, focusing on workplaces with recorded heat hazards or employee complaints. During inspections, OSHA will evaluate compliance with guidelines for hydration, shade, rest breaks, training, and employee acclimatization. Employers are urged to implement measures such as providing cool drinking water, heat illness programs, and rotating work schedules to minimize heat exposure. The initiative is set to remain in effect for three years unless modified or replaced.",
         "link": "https://natlawreview.com/article/osha-launches-national-emphasis-program-to-expand-heat-illness-prevention-campaign"
     },
     {
-        "title": "2022 NSC Safety Congress & Expo",
-        "location": "US",
-        "category": "Events",
+        
         "image": "./img/nsc-logo.webp",
-        "description": "Donec consectetur sed libero sit amet vestibulum. Pellentesque vestibulum cursus neque nec ullamcorper. Sed ut mauris ac nulla efficitur ornare in non diam.",
+        "category": "Events",
+        "location": "US",
+        "title": "2022 NSC Safety Congress & Expo",
+        "source": "National Safety Council",
+        "date": "June 6, 2022",
+        "summary": "Donec consectetur sed libero sit amet vestibulum. Pellentesque vestibulum cursus neque nec ullamcorper. Sed ut mauris ac nulla efficitur ornare in non diam.",
         "link": "https://congress.nsc.org/nsc2025/public/enter.aspx"
     },
     {
-        "title": "National Safety Council, Amazon and Top Industry Employers Pledge to Reduce Workplace Injuries by 25% by 2025",
-        "location": "US",
-        "category": "Research",
         "image": "./img/nsc-logo-2.webp",
-        "description": "Praesent sodales aliquet semper. Mauris commodo, quam vitae iaculis vulputate, mauris metus volutpat nunc, sit amet lacinia erat velit a purus. Aliquam eget lacinia mauris. Suspendisse sed tellus nec augue condimentum finibus.",
+        "category": "Research",
+        "location": "US",
+        "title": "National Safety Council, Amazon and Top Industry Employers Pledge to Reduce Workplace Injuries by 25% by 2025",
+        "source": "National Safety Council",
+        "date": "June 6, 2022",
+        "summary": "Praesent sodales aliquet semper. Mauris commodo, quam vitae iaculis vulputate, mauris metus volutpat nunc, sit amet lacinia erat velit a purus. Aliquam eget lacinia mauris. Suspendisse sed tellus nec augue condimentum finibus.",
         "link": "https://www.prnewswire.com/news-releases/national-safety-council-amazon-and-top-industry-employers-pledge-to-reduce-workplace-injuries-by-25-by-2025-301560449.html"
     },
     {
-        "title": "Amid criticism of workplace injuries, Amazon signs a new safety pledge",
-        "location": "US",
-        "category": "Industry",
         "image": "./img/seattle-times-logo.webp",
-        "description": "Fusce gravida lorem in sodales consequat. Etiam accumsan nulla eros, sed consequat diam euismod id. Integer sed imperdiet sem, a pretium neque.",
+        "category": "Industry",
+        "location": "US",
+        "title": "Amid criticism of workplace injuries, Amazon signs a new safety pledge",
+        "source": "Lauren Rosenblatt",
+        "date": "June 3, 2022",
+        "summary": "Fusce gravida lorem in sodales consequat. Etiam accumsan nulla eros, sed consequat diam euismod id. Integer sed imperdiet sem, a pretium neque.",
         "link": "https://www.seattletimes.com/business/amid-criticism-of-workplace-injuries-amazon-signs-a-new-safety-pledge/"
     }
 ]

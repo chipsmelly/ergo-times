@@ -15,46 +15,51 @@
 
 <body>
     <div class="base">
-        <header class="header header-lg">
-            <div class="nav">
-                <div class="top">
-                    <div class="left">
-                        <div class="logo">
-                            <h1 class="cormorant-garamond-bold">Ergonomics Times</h1>
-                            <h2 class="nunito-sans">Keeping you up-to-date on news in ergonomics</h2>
+        <header class="header-outer">
+            <div class="header-inner header-sm">
+                <div class="header-top">
+
+                    <div class="header-left">
+                        <div class="logo-container">
+                            <h1 class="logo-name cormorant-garamond-bold">Ergonomics Times</h1>
+                            <h2 class="logo-slogan nunito-sans">Keeping you up-to-date on news in ergonomics</h2>
                         </div>
                     </div>
 
-                    <div class="right">
-                        <div class=""><img src="./svg/search-small.svg"/></div>
-                        <div class="search">
-                            <form class="search-box" search-box>
-                                <input type="search" name="s" id="s" class="search-input" placeholder="Search..." search>
-                            </form>
+                    <div class="header-right">
+                        <div class="button-container">
+                            <button class="drop-button" drop-button>
+                                <i class="drop-icon" drop-icon>
+                                    <img src="./svg/menu-white.svg" class="drop-image" drop-image/>
+                                </i>
+                            </button>
                         </div>
                     </div>
+
                 </div>
+                <div class="header-bottom hide" drop-window>
 
-                <div class="bottom">
-                    <div class="filter-outer">
-                        <div class="filter-inner">
-                            <div class="filter-tabs">
-                                <ul class="tab-item cat-tabs">
-                                    <li class="filter-item"><button class="filter-button noto-sans-reg" id="legal-button" data-slug="legal" data-parent="false" data-title="Legal" data-group="1">Legal</button></li>
-                                    <li class="filter-item"><button class="filter-button noto-sans-reg" id="research-button" data-slug="research" data-parent="false" data-title="Research" data-group="2">Research</button></li>
-                                    <li class="filter-item"><button class="filter-button noto-sans-reg" id="industry-button" data-slug="industry" data-parent="false" data-title="Industry" data-group="3">Industry</button></li>
-                                    <li class="filter-item"><button class="filter-button noto-sans-reg" id="events-button" data-slug="events" data-parent="false" data-title="Events" data-group="4">Events</button></li>
-                                </ul>
-                                <div class="tab-item help-container">
-                                    <img src="./svg/funnel-small.svg"/>
-                                </div>
-                                <ul class="tab-item loc-tabs">
-                                    <li class="filter-item"><button class="filter-button noto-sans-reg" id="us-button" data-slug="us" data-parent="false" data-title="US" data-group="5">U.S.</button></li>
-                                    <li class="filter-item"><button class="filter-button noto-sans-reg" id="international-button" data-slug="international" data-parent="false" data-title="International" data-group="6">International</button></li>
-                                </ul>
-                            
-                            </div>
-                        </div>
+                    <div class="search-container">
+                        <form class="search-box" search-box-sm>
+                            <input type="search" name="s" class="search-input" placeholder="Search. . ." search-input-sm>
+                        </form>
+                    </div>
+
+                    <div class="filter-container">
+
+                        <ul class="category-list">
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" legal-button-sm>Legal</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" research-button-sm>Research</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" industry-button-sm>Industry</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" events-button-sm>Events</button></li>
+                        </ul>
+                    
+
+                        <ul class="location-list">
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" us-button-sm>U.S.</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" international-button-sm>International</button></li>
+                        </ul>
+                
                     </div>
                 </div>
             </div>
@@ -62,123 +67,135 @@
 
 
 
-        <header class="header header-sm">
-            <div class="nav">
-                <div class="top">
-                    <div class="left">
-                        <div class="logo">
-                            <h1 class="cormorant-garamond-bold">Ergonomics Times</h1>
-                            <h2 class="nunito-sans">Keeping you up-to-date on news in ergonomics</h2>
+        <header class="header-outer">
+            <div class="header-inner header-lg">
+                <div class="header-top">
+
+                    <div class="header-left">
+                        <div class="logo-container">
+                            <h1 class="logo-name cormorant-garamond-bold">Ergonomics Times</h1>
+                            <h2 class="logo-slogan nunito-sans">Keeping you up-to-date on news in ergonomics</h2>
                         </div>
                     </div>
 
-                    <div class="right">
-                        <div class="filter-drop hide">
-                            <button class="filter-drop-button drop-button" filter-button>
-                                <i class="filter-icon">
-                                    <img src="./svg/funnel-white.svg" class="filter-svg" filter-icon/>
-                                </i>
-                            </button>
-                        </div>
-                        <div class="search-drop hide">
-                            <button class="search-drop-button drop-button" search-button>
-                                <i class="search-icon">
-                                    <img src="./svg/search-white.svg" class="search-svg" search-icon/>
-                                </i>
-                            </button>
+                    <div class="header-right">
+                        <div class="icon-container">
+                            <img src="./svg/search-small.svg"/>
                         </div>
 
-                        <div class="menu-drop">
-                            <button class="menu-drop-button drop-button" menu-button>
-                                <i class="menu-icon">
-                                    <img src="./svg/menu-white.svg" class="menu-svg" menu-icon/>
-                                </i>
-                            </button>
+                        <div class="search-container">
+                            <form class="search-box" search-box-lg>
+                                <input type="search" name="s" class="search-input" placeholder="Search. . ." search-input-lg>
+                            </form>
                         </div>
+                    </div>
 
+                </div>
+                <div class="header-bottom">
+                    <div class="filter-container">
+                        <ul class="category-list">
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" legal-button-lg>Legal</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" research-button-lg>Research</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" industry-button-lg>Industry</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" events-button-lg>Events</button></li>
+                        
+                        </ul>
+                        <div class="icon-container">
+                            <img src="./svg/funnel-small.svg"/>
+                        </div>
+                        <ul class="location-list">
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" us-button-lg>U.S.</button></li>
+                            <li class="filter-item"><button class="filter-button noto-sans-reg" international-button-lg>International</button></li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="bottom bottom-drop">
-                    <div class="search search-container-drop hide" search-window>
-                        <form class="search-box search-box-drop" search-box search0box-drop>
-                            <input type="search" name="s" id="s-drop" class="search-input" placeholder="Search..." search search-drop>
-                        </form>
-                    </div>
-
-                    
-                    <div class="filter-outer filter-outer-drop hide" filter-window>
-                        <div class="filter-inner">
-                            <div class="filter-tabs filter-tabs-drop">
-                                <ul class="cat-tabs">
-                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="legal-button-drop" data-slug="legal" data-parent="false" data-title="Legal" data-group="1">Legal</button></li>
-                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="research-button-drop" data-slug="research" data-parent="false" data-title="Research" data-group="2">Research</button></li>
-                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="industry-button-drop" data-slug="industry" data-parent="false" data-title="Industry" data-group="3">Industry</button></li>
-                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="events-button-drop" data-slug="events" data-parent="false" data-title="Events" data-group="4">Events</button></li>
-                                
-                                </ul>
-                                <ul class="loc-tabs">
-                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="us-button-drop" data-slug="us" data-parent="false" data-title="US" data-group="5">U.S.</button></li>
-                                    <li class="filter-item filter-item-drop"><button class="filter-button noto-sans-reg" id="international-button-drop" data-slug="international" data-parent="false" data-title="International" data-group="6">International</button></li>
-                                
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                </div>
-                
             </div>
         </header>
 
 
 
         <main class="content-area">
-            <div class="content-container">
 
-                <template grid-template>
-                    <div class="cell-outer" cell-outer>
-                        <div class="cell-inner">
+            <div class="grid-container">
+
+                <template class="grid-template" grid-template>
+
+                    <div class="card-outer">
+                        <div class="card-inner">
+
 
                             <div class="card-front">
-                                <div class="cell-logo" >  
-                                    <img class="card-item logo" src="" cell-logo/>
+
+                                <div class="card-top">
+
+                                    <div class="image-container">
+                                        <img class="card-image" src="" card-image/>
+                                    </div>
+                                    
+                                    <div class="tag-container">
+                                        <div class="category-tag card-tag noto-sans-reg" category-tag></div>
+                                        <div class="location-tag card-tag noto-sans-reg" location-tag></div>
+                                    </div>
+
+                                    <div class="title-container">
+                                        <h3 class="card-title nunito-sans-bold" card-title></h3>
+                                    </div>
+
+                                    <div class="source-container">
+                                        <div class="card-source noto-sans-reg" card-source></div>
+                                    </div>
+
+                                    <div class="date-container">
+                                        <div class="card-date noto-sans-reg" card-date></div>
+                                    </div>
+
                                 </div>
-                                <div class="cell-tag" cell-tag>
-                                    <div class="category-tag card-item tag genre noto-sans-reg" category-tag></div>
-                                    <div class="location-tag card-item tag location noto-sans-reg" location-tag></div>
+                                <div class="card-bottom">
+                                    <div class="button-container">
+                                        <a href="" class="read-link card-button noto-sans-reg" read-link-front>Read</a>
+                                        <button class="flip-button card-button noto-sans-reg" flip-button-front>Flip</button>
+                                    </div>
                                 </div>
-                                <div class="cell-title" >
-                                    <h3 class="card-item title nunito-sans-bold" cell-title></h3>
-                                </div>
-                                <div class=" front-button">
-                                    <a href="" class="card-item article-button noto-sans-reg" cell-button front-button target="_blank">Read</button>
-                                </div>
+
                             </div>
-                        
                             <div class="card-back">
-                                <div class="cell-description">
-                                    <p class="card-item description nunito-sans" cell-description></p>
+                                <div class="card-top">
+                                    <div class="summary-container">
+                                        <p class="card-summary nunito-sans" card-summary></p>
+                                    </div>
+
+                                    <div class="disclaimer-container">
+                                        
+                                        <div class="card-disclaimer noto-sans-reg">
+                                            <div class="icon-container">
+                                                <img class="disclaimer-icon" src="./svg/ai-small.svg"/>
+                                            </div> OpenAI-generated summary
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="cell-button back-button">
-                                    <a href="" class="card-item article-button noto-sans-reg" cell-button back-button target="_blank">Read</button>
+
+                                <div class="card-bottom">
+
+                                    <div class="button-container">
+                                        <a href="" class="read-link card-button noto-sans-reg" read-link-back>Read</a>
+                                        <button class="flip-button card-button noto-sans-reg" flip-button-back>Flip</button>
+                                    </div>
+
                                 </div>
+
                             </div>
 
                         </div>
+
+                        
+
                     </div>
                 </template>
 
-
-                <div class="grid" card-container>
-                    
-
-
-                </div>
-
+                <div class="grid" grid></div>
 
             </div>
+            
         </main>
     </div>
 
