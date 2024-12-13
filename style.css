@@ -166,16 +166,19 @@ button, a {
     height: 36px;
 }
 
+.search-input, .filter-button {
+    background-color: #303030;
+    color: white;
+    border: #595959 solid 1px;
+}
+
 .search-input {
     width: 100%;
     height: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    color: #1b1b1b;
-    background-color: #272727;
-    border: #595959 solid 1px;
-    color: white;
     border-radius: 3px;
+    font-size: 15px;
 }
 
 .header-sm .filter-container {
@@ -217,12 +220,8 @@ button, a {
 
 .filter-button {
     width: 100%;
-    font-size: 12px;
-    color: #1b1b1b;
-    background-color: #272727;
-    border: #595959 solid 1px;
-    color: white;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 400;
     padding: 8px 12px;
 }
 
@@ -458,7 +457,7 @@ button, a {
     font-size: 12px;
     color: #1b1b1b;
     background-color: #e6e6e6;
-    border: #595959 solid 1px;
+    border: #595959 solid 1.5px;
     font-weight: 700;
     padding: 8px 12px;
 }
@@ -466,6 +465,14 @@ button, a {
 .grid .button-container *:hover {
     background-color: #ffffff;
 }
+
+/* .read-link {
+    background-color: rgb(225, 255, 179);
+}
+
+.flip-button {
+    background-color: rgb(191, 226, 255);
+} */
 
 @media (min-width: 320px) {
     .card-title {

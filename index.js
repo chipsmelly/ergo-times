@@ -595,7 +595,7 @@ internationalButtonDrop.addEventListener("mouseout", () => {
 
 function mouseOver(button, isFilterActive) {
     if (isFilterActive === true) {
-        button.style.backgroundColor = "#272727"
+        button.style.backgroundColor = "#303030"
     } else {
         button.style.backgroundColor = "#161616"
     }
@@ -605,7 +605,7 @@ function mouseOut(button, isFilterActive) {
     if (isFilterActive === true) {
         button.style.backgroundColor = "#161616"
     } else {
-        button.style.backgroundColor = "#272727"
+        button.style.backgroundColor = "#303030"
     }
 }
 
@@ -614,7 +614,7 @@ function activateButton(button) {
 }
 
 function deactivateButton(button) {
-    button.style.backgroundColor = "#272727"
+    button.style.backgroundColor = "#303030"
 }
 
 
