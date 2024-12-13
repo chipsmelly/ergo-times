@@ -158,11 +158,11 @@ dropButton.addEventListener("click", function () {
     if (isDropWindowOpen === false) {
         isDropWindowOpen = true
         dropWindow.classList.remove("hide")
-        dropIcon.src = "./svg/menu-gray.svg"
+        dropImage.src = "./svg/menu-gray.svg"
     } else {
         isDropWindowOpen = false
         dropWindow.classList.add("hide")
-        dropIcon.src = "./svg/menu-white.svg"
+        dropImage.src = "./svg/menu-white.svg"
     }
 })
 
@@ -488,204 +488,99 @@ internationalButtonDrop.addEventListener("click", function () {
 } )
 
 legalButton.addEventListener("mouseover", () => {
-    if (isLegalFilterActive === true) {
-        legalButton.style.backgroundColor = "#272727"
-        console.log(isLegalFilterActive)
-        console.log(legalButton.style.backgroundColor)
-
-    } else {
-        legalButton.style.backgroundColor = "#161616"
-        console.log(isLegalFilterActive)
-        console.log(legalButton.style.backgroundColor)
-    }
+    mouseOver(legalButton, isLegalFilterActive)
 })
 
 legalButton.addEventListener("mouseout", () => {
-    if (isLegalFilterActive === true) {
-        legalButton.style.backgroundColor = "#161616"
-        console.log(isLegalFilterActive)
-        console.log(legalButton.style.backgroundColor)
-    } else {
-        legalButton.style.backgroundColor = "#272727"
-        console.log(isLegalFilterActive)
-        console.log(legalButton.style.backgroundColor)
-    }
+    mouseOut(legalButton, isLegalFilterActive)
 })
 
 legalButtonDrop.addEventListener("mouseover", () => {
-    if (isLegalFilterActive === true) {
-        legalButtonDrop.style.backgroundColor = "#272727"
-    } else {
-        legalButtonDrop.style.backgroundColor = "#161616"
-    }
+    mouseOver(legalButtonDrop, isLegalFilterActive)
 })
 
 legalButtonDrop.addEventListener("mouseout", () => {
-    if (isLegalFilterActive === true) {
-        legalButtonDrop.style.backgroundColor = "161616"
-    } else {
-        legalButtonDrop.style.backgroundColor = "#272727"
-    }
+    mouseOut(legalButtonDrop, isLegalFilterActive)
 })
 
 researchButton.addEventListener("mouseover", () => {
-    if (isResearchFilterActive === true) {
-        researchButton.style.backgroundColor = "#272727"
-    } else {
-        researchButton.style.backgroundColor = "#161616"
-    }
+    mouseOver(researchButton, isResearchFilterActive)
 })
 
 researchButton.addEventListener("mouseout", () => {
-    if (isResearchFilterActive === true) {
-        researchButton.style.backgroundColor = "#161616"
-    } else {
-        researchButton.style.backgroundColor = "#272727"
-    }
+    mouseOut(researchButton, isResearchFilterActive)
 })
 
 researchButtonDrop.addEventListener("mouseover", () => {
-    if (isResearchFilterActive === true) {
-        researchButtonDrop.style.backgroundColor = "#272727"
-    } else {
-        researchButtonDrop.style.backgroundColor = "#161616"
-    }
+    mouseOver(researchButtonDrop, isResearchFilterActive)
 })
 
 researchButtonDrop.addEventListener("mouseout", () => {
-    if (isResearchFilterActive === true) {
-        researchButtonDrop.style.backgroundColor = "#161616"
-    } else {
-        researchButtonDrop.style.backgroundColor = "#272727"
-    }
+    mouseOut(researchButtonDrop, isResearchFilterActive)
 })
 
 industryButton.addEventListener("mouseover", () => {
-    if (isIndustryFilterActive === true) {
-        industryButton.style.backgroundColor = "#272727"
-    } else {
-        industryButton.style.backgroundColor = "#161616"
-    }
+    mouseOver(industryButton, isIndustryFilterActive)
 })
 
 industryButton.addEventListener("mouseout", () => {
-    if (isIndustryFilterActive === true) {
-        industryButton.style.backgroundColor = "#161616"
-    } else {
-        industryButton.style.backgroundColor = "#272727"
-    }
+    mouseOut(industryButton, isIndustryFilterActive)
 })
 
 industryButtonDrop.addEventListener("mouseover", () => {
-    if (isIndustryFilterActive === true) {
-        industryButtonDrop.style.backgroundColor = "#272727"
-    } else {
-        industryButtonDrop.style.backgroundColor = "#161616"
-    }
+    mouseOver(industryButtonDrop, isIndustryFilterActive)
 })
 
 industryButtonDrop.addEventListener("mouseout", () => {
-    if (isIndustryFilterActive === true) {
-        industryButtonDrop.style.backgroundColor = "#161616"
-    } else {
-        industryButtonDrop.style.backgroundColor = "#272727"
-    }
+    mouseOut(industryButtonDrop, isIndustryFilterActive)
 })
 
 eventsButton.addEventListener("mouseover", () => {
-    if (isEventsFilterActive === true) {
-        eventsButton.style.backgroundColor = "#272727"
-    } else {
-        eventsButton.style.backgroundColor = "#161616"
-    }
+    mouseOver(eventsButton, isEventsFilterActive)
 })
 
 eventsButton.addEventListener("mouseout", () => {
-    if (isEventsFilterActive === true) {
-        eventsButton.style.backgroundColor = "#161616"
-    } else {
-        eventsButton.style.backgroundColor = "#272727"
-    }
+    mouseOut(eventsButton, isEventsFilterActive)
 })
 
 eventsButtonDrop.addEventListener("mouseover", () => {
-    if (isEventsFilterActive === true) {
-        eventsButtonDrop.style.backgroundColor = "#272727"
-    } else {
-        eventsButtonDrop.style.backgroundColor = "#161616"
-    }
+    mouseOver(eventsButtonDrop, isEventsFilterActive)
 })
 
 eventsButtonDrop.addEventListener("mouseout", () => {
-    if (isEventsFilterActive === true) {
-        eventsButtonDrop.style.backgroundColor = "#161616"
-    } else {
-        eventsButtonDrop.style.backgroundColor = "#272727"
-    }
+    mouseOut(eventsButtonDrop, isEventsFilterActive)
 })
 
 usButton.addEventListener("mouseover", () => {
-    if (isUsFilterActive === true) {
-        usButton.style.backgroundColor = "#272727"
-    } else {
-        usButton.style.backgroundColor = "#161616"
-    }
+    mouseOver(usButton, isUsFilterActive)
 })
 
 usButton.addEventListener("mouseout", () => {
-    if (isUsFilterActive === true) {
-        usButton.style.backgroundColor = "#161616"
-    } else {
-        usButton.style.backgroundColor = "#272727"
-    }
+    mouseOut(usButton, isUsFilterActive)
 })
 
 usButtonDrop.addEventListener("mouseover", () => {
-    if (isUsFilterActive === true) {
-        usButtonDrop.style.backgroundColor = "#272727"
-    } else {
-        usButtonDrop.style.backgroundColor = "#161616"
-    }
+    mouseOver(usButtonDrop, isUsFilterActive)
 })
 
 usButtonDrop.addEventListener("mouseout", () => {
-    if (isUsFilterActive === true) {
-        usButtonDrop.style.backgroundColor = "#161616"
-    } else {
-        usButtonDrop.style.backgroundColor = "#272727"
-    }
+    mouseOut(usButtonDrop, isUsFilterActive)
 })
 
 internationalButton.addEventListener("mouseover", () => {
-    if (isInternationalFilterActive === true) {
-        internationalButton.style.backgroundColor = "#272727"
-    } else {
-        internationalButton.style.backgroundColor = "#161616"
-    }
+    mouseOver(internationalButton, isInternationalFilterActive)
 })
 
 internationalButton.addEventListener("mouseout", () => {
-    if (isInternationalFilterActive === true) {
-        internationalButton.style.backgroundColor = "#161616"
-    } else {
-        internationalButton.style.backgroundColor = "#272727"
-    }
+    mouseOut(internationalButton, isInternationalFilterActive)
 })
 
 internationalButtonDrop.addEventListener("mouseover", () => {
-    if (isInternationalFilterActive === true) {
-        internationalButtonDrop.style.backgroundColor = "#272727"
-    } else {
-        internationalButtonDrop.style.backgroundColor = "#161616"
-    }
+    mouseOver(internationalButtonDrop, isInternationalFilterActive)
 })
 
 internationalButtonDrop.addEventListener("mouseout", () => {
-    if (isInternationalFilterActive === true) {
-        internationalButtonDrop.style.backgroundColor = "#161616"
-    } else {
-        internationalButtonDrop.style.backgroundColor = "#272727"
-    }
+    mouseOut(internationalButtonDrop, isInternationalFilterActive)
 })
 
 
@@ -697,6 +592,22 @@ internationalButtonDrop.addEventListener("mouseout", () => {
 
 
 // Functions
+
+function mouseOver(button, isFilterActive) {
+    if (isFilterActive === true) {
+        button.style.backgroundColor = "#272727"
+    } else {
+        button.style.backgroundColor = "#161616"
+    }
+}
+
+function mouseOut(button, isFilterActive) {
+    if (isFilterActive === true) {
+        button.style.backgroundColor = "#161616"
+    } else {
+        button.style.backgroundColor = "#272727"
+    }
+}
 
 function activateButton(button) {
     button.style.backgroundColor = "#161616"

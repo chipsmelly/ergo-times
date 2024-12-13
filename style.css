@@ -40,9 +40,15 @@
 }
 
 
+/* colors:
+dark dark: #161616
+    dark: #1b1b1b
+    dark(less): #272727
+    border-gray(med-dark): #595959
+    light gray: #e6e6e6
+    white: #ffffff
 
-
-
+*/
 
 
 
@@ -53,9 +59,11 @@
 
 /* CSS BEGINS HERE */
 
+/* Basic presets for the elements themselves. Mostly just for automatically setting
+    displays and removing margins/padding, etc. */
+
 * {
     box-sizing: border-box;
-    
     border: 0;
     margin: 0;
     padding: 0;
@@ -63,7 +71,7 @@
 
 body {
     margin: 8px;
-    background-color: #272727;
+    background-color: #e6e6e6;
 }
 
 div {
@@ -98,15 +106,15 @@ i {
 button, a {
     cursor: pointer;
     border: none; 
-
-    /* border-radius: 2px; */
+    border-radius: 3px;
 }
 
-
+/* Styles for the header.  Includes the outer header-container as well as the small version of 
+    the inner header elements */
 
 
 .header-outer {
-    background-color: rgb(22, 22, 22);
+    background-color: #161616;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,6 +124,7 @@ button, a {
     width: calc(100% - 20px);
     max-width: 1440px;
     display: block;
+    margin-bottom: 5px;
 }
 
 .header-top {
@@ -140,7 +149,7 @@ button, a {
 }
 
 .drop-button {
-    background-color: #161616;
+    background-color: #1b1b1b;
 }
 
 
@@ -162,13 +171,12 @@ button, a {
     height: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    color: white;
+    color: #1b1b1b;
     background-color: #272727;
     border: #595959 solid 1px;
+    color: white;
+    border-radius: 3px;
 }
-
-
-
 
 .header-sm .filter-container {
     display: flex;
@@ -210,9 +218,10 @@ button, a {
 .filter-button {
     width: 100%;
     font-size: 12px;
-    color: white;
+    color: #1b1b1b;
     background-color: #272727;
     border: #595959 solid 1px;
+    color: white;
     font-weight: 700;
     padding: 8px 12px;
 }
@@ -235,6 +244,8 @@ button, a {
         display: none;
     }
 }
+
+/* The inner header styling for the larger version of the header. */
 
 .header-lg .filter-container {
     display: flex;
@@ -266,6 +277,8 @@ button, a {
     }
 }
 
+/* Styling for the main content area. This includes the grid and then each of the card elements. */
+
 .content-area {
     display: flex;
     flex-direction: column;
@@ -274,7 +287,6 @@ button, a {
 
 .grid-container {
     width: calc(100% - 20px);
-    margin-top: 20px;
 }
 
 @media (min-width: 420px) {
@@ -287,7 +299,7 @@ button, a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 @media (min-width: 700px) {
@@ -301,6 +313,8 @@ button, a {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+/* Card container */
 
 .card-outer {
     aspect-ratio: .75;
@@ -330,9 +344,9 @@ button, a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(22, 22, 22);
-    color: white;
-    border: #595959 solid 1px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(27, 27, 27);
+    border: #595959 solid 1.5px;
     border-radius: 10px;
     backface-visibility: hidden; 
 }
@@ -354,6 +368,8 @@ button, a {
     flex-grow: 1;
 }
 
+/* Content on the front side of the card */
+
 .image-container {
     align-self: center;
     width: 100%;
@@ -367,10 +383,7 @@ button, a {
 .card-image {
     width: 84%;
     background-color: white;
-
-    border: #595959 solid 1px;
     display: none;
-
 }
 
 .tag-container {
@@ -386,9 +399,11 @@ button, a {
     padding-top: 2px;
     padding-bottom: 2px;
     font-size: 12px;
-    color: white;
-    background-color: #272727;
+    color: #1b1b1b;
+    background-color: #e6e6e6;
     border: #595959 solid 1px;
+
+    border-radius: 2px;
 }
 
 .title-container {
@@ -401,13 +416,9 @@ button, a {
 
 .card-title {
     height: 100%;
-    padding-left: 8px;
-    padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: white;
-    background-color: #272727;
-    border: #595959 solid 1px;
+    color: #1b1b1b;
 }
 
 .source-container {
@@ -416,14 +427,10 @@ button, a {
 }
 
 .card-source {
-    padding-left: 8px;
-    padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
     font-size: 12px;
-    color: white;
-    background-color: #272727;
-    border: #595959 solid 1px;
+    color: #1b1b1b;
 }
 
 .date-container {
@@ -432,14 +439,10 @@ button, a {
 }
 
 .card-date {
-    padding-left: 8px;
-    padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
     font-size: 12px;
-    color: white;
-    background-color: #272727;
-    border: #595959 solid 1px;
+    color: #1b1b1b;
 }
 
 .button-container {
@@ -453,19 +456,16 @@ button, a {
 .grid .button-container *, .grid-template .button-container * {
     text-decoration: none;
     font-size: 12px;
-    color: white;
-    background-color: #272727;
+    color: #1b1b1b;
+    background-color: #e6e6e6;
     border: #595959 solid 1px;
     font-weight: 700;
     padding: 8px 12px;
 }
 
 .grid .button-container *:hover {
-    background-color: #161616;
+    background-color: #ffffff;
 }
-
-/* Front side media queries */
-
 
 @media (min-width: 320px) {
     .card-title {
@@ -480,6 +480,8 @@ button, a {
         display: block;
     }
 }
+
+/* Media querying for the text size on the front of the card */
 
 @media (min-width: 380px) {
     .card-title {
@@ -541,16 +543,7 @@ button, a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+/* Content on the BACK side of the card */
 
 .summary-container {
     padding-left: 8%;
@@ -562,13 +555,9 @@ button, a {
 
 .card-summary {
     height: 100%;
-    padding-left: 8px;
-    padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: white;
-    background-color: #272727;
-    border: #595959 solid 1px;
+    color: #1b1b1b;
 }
 
 .disclaimer-container {
@@ -580,19 +569,14 @@ button, a {
     display: flex;
     justify-content: start;
     gap: 10px;
-    color: white;
-    background-color: #272727;
-    border: #595959 solid 1px;
+    color: #1b1b1b;
     height: 100%;
     font-size: 12px;
-    padding-left: 8px;
-    padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
-
-
+/* Extra styling for classes used by javascript */
 
 .hide {
     display: none;
