@@ -488,67 +488,6 @@ button, a {
     }
 }
 
-/* Media querying for the text size on the front of the card */
-
-@media (min-width: 380px) {
-    .card-title {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 420px) {
-    .card-title {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 500px) {
-    .card-title {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 700px) {
-    .card-title {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 830px) {
-    .card-title {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 900px) {
-    .card-title {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1000px) {
-    .card-title {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1140px) {
-    .card-title {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1260px) {
-    .card-title {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1450px) {
-    .card-title {
-        font-size: 20px;
-    }
-}
 
 /* Content on the BACK side of the card */
 
@@ -565,6 +504,7 @@ button, a {
     padding-top: 2px;
     padding-bottom: 2px;
     color: #1b1b1b;
+    font-size: 12px;
 }
 
 .disclaimer-container {
@@ -581,6 +521,114 @@ button, a {
     font-size: 12px;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+/* Media querying for the text size on the front of the card */
+
+@media (min-width: 380px) {
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-summary {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 420px) {
+    .card-title {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 500px) {
+    .card-title {
+        font-size: 20px;
+    }
+
+    
+}
+
+@media (min-width: 600px) {
+    .card-title {
+        font-size: 22px;
+    }
+    
+    .card-summary {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 700px) {
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-summary {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 800px) {
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-summary {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 870px) {
+    .card-title {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 960px) {
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-summary {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-summary {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1140px) {
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-summary {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-summary {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1450px) {
+    .card-title {
+        font-size: 20px;
+    }
 }
 
 /* Extra styling for classes used by javascript */
