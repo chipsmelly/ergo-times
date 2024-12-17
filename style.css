@@ -466,14 +466,6 @@ button, a {
     background-color: #ffffff;
 }
 
-/* .read-link {
-    background-color: rgb(225, 255, 179);
-}
-
-.flip-button {
-    background-color: rgb(191, 226, 255);
-} */
-
 @media (min-width: 320px) {
     .card-title {
         font-size: 14px;
