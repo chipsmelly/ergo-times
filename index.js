@@ -38,6 +38,7 @@ const usButtonDrop = document.querySelector("[us-button-sm]")
 const internationalButton = document.querySelector("[international-button-lg]")
 const internationalButtonDrop = document.querySelector("[international-button-sm]")
 
+
 /*  Section 1.2
 
     Next, I'm creating the VARIABLES. This is for values that are going to change during the life cycle of
@@ -135,11 +136,44 @@ fetch("./articles.json")
             const buttonFront = card.querySelector("[flip-button-front]")
             const buttonBack= card.querySelector("[flip-button-back]")
 
+            
+            const frontCorner = card.querySelector("[front-corner]")
+            const backCorner = card.querySelector("[back-corner]")
+
             image.src = article.image
 
             category.textContent = article.category
             const categoryClass = article.category.toLowerCase()
             category.classList.add(categoryClass)
+
+            switch (categoryClass) {
+                case 'legal':
+                    for(let i=0; i < card.querySelectorAll("[suit-icon]").length; i++) {
+                        card.querySelectorAll("[suit-icon")[i].src = "./svg/helmet-safety-1.svg"
+                    }
+                    break
+                case 'industry':
+                    for(let i=0; i < card.querySelectorAll("[suit-icon]").length; i++){
+                        card.querySelectorAll("[suit-icon")[i].src = "./svg/briefcase-1.svg"
+                    }
+                    break
+                case 'research':
+                    for(let i=0; i < card.querySelectorAll("[suit-icon]").length; i++){
+                        card.querySelectorAll("[suit-icon")[i].src = "./svg/graduation-cap-1.svg"
+                    }
+                    break
+                case 'events':
+                    for(let i=0; i < card.querySelectorAll("[suit-icon]").length; i++){
+                        card.querySelectorAll("[suit-icon")[i].src = "./svg/hand-shake.svg"
+                    }
+                    break
+                default:
+                    for(let i=0; i < card.querySelectorAll("[suit-icon]").length; i++){
+                        card.querySelectorAll("[suit-icon")[i].src = "./svg/code-1.svg"
+                    }
+                    break
+
+            }
 
 
             location.textContent = article.location
@@ -158,7 +192,14 @@ fetch("./articles.json")
 
 
             buttonFront.addEventListener("click", () => {
+                
+                frontCorner.classList.toggle('hide')
+                
                 card.classList.toggle('is-flipped')
+
+                setTimeout (() => {
+                    backCorner.classList.toggle('hide')
+                }, 800)
 
                 if(!card.classList.contains('is-image-hidden')) {
                     setTimeout (() => {
@@ -170,7 +211,14 @@ fetch("./articles.json")
             })
 
             buttonBack.addEventListener("click", () => {
+
+                backCorner.classList.toggle('hide')
+
                 card.classList.toggle('is-flipped')
+
+                setTimeout (() => {
+                    frontCorner.classList.toggle('hide')
+                }, 800)
 
                 if(!card.classList.contains('is-image-hidden')) {
                     setTimeout (() => {

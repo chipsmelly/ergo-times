@@ -71,7 +71,7 @@ dark dark: #161616
 
 body {
     margin: 8px;
-    background-color: #e6e6e6;
+    background-color: #3a3a3a;
 }
 
 div {
@@ -342,10 +342,10 @@ button, a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
     background-color: rgb(255, 255, 255);
     color: rgb(27, 27, 27);
-    border: #595959 solid 1.5px;
+    /* border: #595959 solid 1.5px; */
     border-radius: 10px;
     backface-visibility: hidden; 
 }
@@ -353,12 +353,16 @@ button, a {
 .card-front {
     flex-grow: 1;
     background-color: rgb(255, 255, 255);
-    /* border: red 1.5px solid; */
+    justify-content: end;
+}
+
+.card-back {
+    justify-content: start;;
 }
 
 
 
-.card-front-outer {
+.reverse-outer {
     height: 100%;
     width: 96%;
     display: flex;
@@ -394,7 +398,7 @@ button, a {
     );
 }
 
-.card-front-inner {
+.reverse-inner {
 
     height: 100%;
     width: 88%;
@@ -547,6 +551,10 @@ button, a {
 }
 
 
+
+
+
+
 /* Content on the BACK side of the card */
 
 .card-back {
@@ -567,6 +575,8 @@ button, a {
 
 }
 
+
+
 .face-middle {
     display: flex;
     flex-direction: column;
@@ -586,6 +596,11 @@ button, a {
 
     justify-content: end;
     margin-bottom: 4%
+}
+
+.face-right .icon-container, .face-left .icon-container {
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -617,9 +632,10 @@ button, a {
     gap: 10px;
     color: #1b1b1b;
     height: 100%;
-    font-size: 12px;
+    font-size: 16px;
     padding-top: 2px;
     padding-bottom: 2px;
+    font-weight: 700;
 }
 
 /* Media querying for the text size on the front of the card */
@@ -734,4 +750,176 @@ button, a {
 
 .hide {
     display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-back .corner {
+    border-top: rgb(27, 27, 27) 1.5px solid;
+    border-right: rgb(27, 27, 27) 1.5px solid;
+
+    border-top-right-radius: 10px;
+    background-image:
+    linear-gradient(
+        to top right,
+        #3a3a3a 50%,
+        white 50%
+    );
+
+}
+
+.card-back .corner-inner {
+
+    border-top-right-radius: 10px;
+    background-image:
+    linear-gradient(
+        to top right,
+        #3a3a3a 50%,
+        transparent 50%
+    );
+
+    z-index: 12;
+}
+
+.reverse-design-outer {
+    height: 80%;
+    width: 80%;
+    position: absolute;
+
+    border-top-right-radius: 8px;
+
+    z-index: 11;
+    background-color: transparent;
+    /* background-color: #eba1a1; */
+    background-size: 100% 100%;
+    background-image:
+    linear-gradient(
+        to top right,
+        transparent 50%,
+        #eba1a1 50%
+    );
+    
+
+    border-top: red 1.5px solid;
+    border-right: red 1.5px solid;
+}
+
+.corner-behind {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+
+    background-color: white;
+    border-top-right-radius: 10%;
+
+}
+
+.reverse-design-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+    background-size: 50% 49%;
+    background-image:
+    linear-gradient(
+        45deg,
+        transparent 48%, white 48%,
+        white 52%,
+        transparent 52%
+    ),
+    linear-gradient(
+        135deg,
+        transparent 48%, white 48%,
+        white 52%, transparent 52%
+    )
+}
+
+.card-front .corner {
+    background-image:
+        linear-gradient(
+            to top left,
+            #3a3a3a 50%,
+            white 50%
+        );
+    
+    border-top: rgb(27, 27, 27) 1.5px solid;
+    border-left: rgb(27, 27, 27) 1.5px solid;
+    
+    border-top-left-radius: 10px;
+}
+
+
+
+.corner {
+    position: absolute;
+    z-index: 12;
+
+    height: 80px;
+    width: 80px;
+
+    background-color: white;
+    align-self: end;
+
+
+
+    background-size: 100% 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.corner-inner {
+    height: 100%;
+    width: 100%;
+
+    
+}
+
+.corner button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.corner-button .icon-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front .arrow-icon {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.card-back .arrow-icon {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.hide {
+    display: none !important;
 }
