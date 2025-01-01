@@ -582,7 +582,7 @@ button, a {
     flex-direction: column;
     width: 15%;
     align-items: center;
-    margin-top: 4%
+    margin-top: 2%
 
 
 }
@@ -594,7 +594,7 @@ button, a {
     align-items: center;
 
     justify-content: end;
-    margin-bottom: 4%
+    margin-bottom: 2%
 }
 
 .face-right .icon-container, .face-left .icon-container {
@@ -611,7 +611,7 @@ button, a {
     flex-direction: column;
     width: 70%;
 
-    margin-top: 7%;
+    margin-top: 10%;
     max-height: 100%;
     margin-bottom: 9%;
 }
@@ -648,6 +648,8 @@ button, a {
     color: #1b1b1b;
     font-size: 12px;
     overflow: hidden;
+
+    text-align: justify;
 }
 
 
@@ -925,8 +927,12 @@ button, a {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
+}
+
+.card-front .ai-icon {
+    justify-content: end;
+    align-items: end;
 }
 
 .card-front .arrow-icon {
