@@ -109,6 +109,11 @@ button, a {
     border-radius: 3px;
 }
 
+.icon-container {
+    height: 20px;
+    width: 20px;
+}
+
 /* Styles for the header.  Includes the outer header-container as well as the small version of 
     the inner header elements */
 
@@ -223,11 +228,9 @@ button, a {
     font-size: 14px;
     font-weight: 400;
     padding: 8px 12px;
-}
-
-.icon-container {
-    height: 20px;
-    width: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
 .header-lg {
@@ -259,7 +262,7 @@ button, a {
     justify-content: space-between;
     gap: 5px;
     height: 36px;
-    width: 70%; 
+    width: 100%; 
 }
 
 .header-lg .location-list {
@@ -275,6 +278,19 @@ button, a {
         width: calc(100% - 100px);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Styling for the main content area. This includes the grid and then each of the card elements. */
 
@@ -313,6 +329,16 @@ button, a {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* Card container */
 
 .card-outer {
@@ -340,27 +366,45 @@ button, a {
 .card-front, .card-back {
     height: 100%;
     width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: end;
+
     background-color: rgb(255, 255, 255);
     color: rgb(27, 27, 27);
-    /* border: #595959 solid 1.5px; */
     border-radius: 10px;
-    backface-visibility: hidden; 
+
+    backface-visibility: hidden;
+
+    flex-grow: 1;
 }
 
+/* These calls (justify content for front and back) are just to help set the location of the 'corner' elements (which act
+    as buttons the flip the card) */
+
 .card-front {
-    flex-grow: 1;
-    background-color: rgb(255, 255, 255);
     justify-content: end;
 }
 
 .card-back {
-    justify-content: start;;
+    justify-content: start;
 }
 
 
+
+.card-top {
+    margin-top: 0%; 
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    flex-grow: 1;
+}
+
+/* Content on the front side of the card */
+
+
+/* 'reverse-outer' goes directly inside the 'card-front' element. The reverse side is the side with the color on it  */
 
 .reverse-outer {
     height: 100%;
@@ -418,15 +462,7 @@ button, a {
 
 }
 
-.card-top {
-    margin-top: 0%; 
-    display: flex;
-    flex-direction: column;
-    gap: 3%;
-    flex-grow: 1;
-}
 
-/* Content on the front side of the card */
 
 .image-container {
     align-self: center;
@@ -508,33 +544,7 @@ button, a {
     color: #1b1b1b;
 }
 
-.card-bottom {
-    margin-bottom: 3%;
-    
-}
 
-.button-container {
-    
-    padding-left: 5%;
-    padding-right: 5%;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-.grid .button-container *, .grid-template .button-container * {
-    text-decoration: none;
-    font-size: 12px;
-    color: #1b1b1b;
-    background-color: #e6e6e6;
-    border: #595959 solid 1.5px;
-    font-weight: 700;
-    padding: 8px 12px;
-}
-
-.grid .button-container *:hover {
-    background-color: #ffffff;
-}
 
 @media (min-width: 320px) {
     .card-title {
@@ -565,6 +575,8 @@ button, a {
     flex-direction: row;
 }
 
+
+
 .face-left {
     display: flex;
     flex-direction: column;
@@ -572,19 +584,6 @@ button, a {
     align-items: center;
     margin-top: 4%
 
-
-}
-
-
-
-.face-middle {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-
-    margin-top: 7%;
-    max-height: 100%;
-    margin-bottom: 9%;
 
 }
 
@@ -604,21 +603,17 @@ button, a {
 }
 
 
-.summary-container {
-    padding-left: 0%;
-    padding-right: 0%;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 0%; 
-}
 
-.card-summary {
-    height: 100%;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: #1b1b1b;
-    font-size: 12px;
-    overflow: hidden;
+
+
+.face-middle {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    margin-top: 7%;
+    max-height: 100%;
+    margin-bottom: 9%;
 }
 
 .disclaimer-container {
@@ -637,6 +632,57 @@ button, a {
     padding-bottom: 2px;
     font-weight: 700;
 }
+
+.summary-container {
+    padding-left: 0%;
+    padding-right: 0%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 0%; 
+}
+
+.card-summary {
+    height: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #1b1b1b;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.card-bottom {
+    margin-bottom: 3%;
+    
+}
+
+.button-container {
+    
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.grid .button-container *, .grid-template .button-container * {
+    text-decoration: none;
+    font-size: 12px;
+    color: #1b1b1b;
+    background-color: #e6e6e6;
+    border: #595959 solid 1.5px;
+    font-weight: 700;
+    padding: 8px 12px;
+}
+
+.grid .button-container *:hover {
+    background-color: #ffffff;
+}
+
 
 /* Media querying for the text size on the front of the card */
 
@@ -746,91 +792,94 @@ button, a {
     }
 }
 
-/* Extra styling for classes used by javascript */
 
-.hide {
-    display: none;
+
+
+
+
+
+
+
+
+
+
+
+
+.corner {
+    position: absolute;
+    z-index: 12;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.card-front .corner {
+    
+    border-top: rgb(27, 27, 27) 1.5px solid;
+    border-left: rgb(27, 27, 27) 1.5px solid;
+    border-top-left-radius: 10px;
 
-
-
-
-
-
-
-
-
-
-
-
+    background-image:
+    linear-gradient(
+        to top left,
+        #3a3a3a 50%,
+        white 50%
+    );
+}
 
 .card-back .corner {
     border-top: rgb(27, 27, 27) 1.5px solid;
     border-right: rgb(27, 27, 27) 1.5px solid;
-
     border-top-right-radius: 10px;
+
     background-image:
     linear-gradient(
         to top right,
         #3a3a3a 50%,
         white 50%
     );
-
 }
 
-.card-back .corner-inner {
+.corner-behind {
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 10%;
 
-    border-top-right-radius: 10px;
-    background-image:
-    linear-gradient(
-        to top right,
-        #3a3a3a 50%,
-        transparent 50%
-    );
-
-    z-index: 12;
+    background-color: white;
 }
 
 .reverse-design-outer {
+    position: absolute;
+    z-index: 11;
     height: 80%;
     width: 80%;
-    position: absolute;
 
     border-top-right-radius: 8px;
-
-    z-index: 11;
+    border-top: red 1.5px solid;
+    border-right: red 1.5px solid;
     background-color: transparent;
-    /* background-color: #eba1a1; */
+
     background-size: 100% 100%;
     background-image:
     linear-gradient(
         to top right,
         transparent 50%,
         #eba1a1 50%
-    );
-    
-
-    border-top: red 1.5px solid;
-    border-right: red 1.5px solid;
-}
-
-.corner-behind {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 10;
-
-    background-color: white;
-    border-top-right-radius: 10%;
-
+    ); 
 }
 
 .reverse-design-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
     position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+
     background-size: 50% 49%;
     background-image:
     linear-gradient(
@@ -846,50 +895,24 @@ button, a {
     )
 }
 
-.card-front .corner {
-    background-image:
-        linear-gradient(
-            to top left,
-            #3a3a3a 50%,
-            white 50%
-        );
-    
-    border-top: rgb(27, 27, 27) 1.5px solid;
-    border-left: rgb(27, 27, 27) 1.5px solid;
-    
-    border-top-left-radius: 10px;
-}
-
-
-
-.corner {
-    position: absolute;
-    z-index: 12;
-
-    height: 80px;
-    width: 80px;
-
-    background-color: white;
-    align-self: end;
-
-
-
-    background-size: 100% 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.corner-inner {
+.corner-infront {
     height: 100%;
     width: 100%;
-
-    
 }
 
-.corner button {
+.card-back .corner-infront {
+    z-index: 12;
+    border-top-right-radius: 10px;
+
+    background-image:
+    linear-gradient(
+        to top right,
+        #3a3a3a 50%,
+        transparent 50%
+    ); 
+}
+
+.corner-button {
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -919,6 +942,9 @@ button, a {
     grid-row-start: 2;
     grid-row-end: 3;
 }
+
+
+/* Extra styling for classes used by javascript */
 
 .hide {
     display: none !important;
