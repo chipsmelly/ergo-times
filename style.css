@@ -352,15 +352,70 @@ button, a {
 
 .card-front {
     flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    /* border: red 1.5px solid; */
 }
 
-.card-back {
-    position: absolute; 
-    transform: rotateY(180deg);
+
+
+.card-front-outer {
+    height: 100%;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    margin: 2%;
+
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+
+    border: red 1.5px solid;
+
+    background-color: #eba1a1;
+    background-size: 7% 5.2%;
+    background-image:
+    linear-gradient(
+        45deg,
+        transparent 48%, white 48%,
+        white 52%,
+        transparent 52%
+    ),
+    linear-gradient(
+        135deg,
+        transparent 48%, white 48%,
+        white 52%, transparent 52%
+    );
+}
+
+.card-front-inner {
+
+    height: 100%;
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-top: 10%;
+    margin-bottom: 6%;
+
+    border: red 1.5px solid;
+
+    background-color: white;
+
 }
 
 .card-top {
-    margin-top: 8%; 
+    margin-top: 0%; 
     display: flex;
     flex-direction: column;
     gap: 3%;
@@ -377,17 +432,18 @@ button, a {
     height: 0%;
     align-items: center;
 
+    overflow: hidden;
 }
 
 .card-image {
-    width: 84%;
+    width: 90%;
     background-color: white;
     display: none;
 }
 
 .tag-container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .card-tag {
@@ -405,9 +461,13 @@ button, a {
     border-radius: 2px;
 }
 
+.tag-container {
+    display: none;
+}
+
 .title-container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 0%; 
@@ -421,8 +481,8 @@ button, a {
 }
 
 .source-container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .card-source {
@@ -433,8 +493,8 @@ button, a {
 }
 
 .date-container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .card-date {
@@ -444,12 +504,18 @@ button, a {
     color: #1b1b1b;
 }
 
+.card-bottom {
+    margin-bottom: 3%;
+    
+}
+
 .button-container {
-    margin-bottom: 8%;
-    padding-left: 8%;
-    padding-right: 8%;
+    
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5px;
 }
 
 .grid .button-container *, .grid-template .button-container * {
@@ -483,9 +549,49 @@ button, a {
 
 /* Content on the BACK side of the card */
 
+.card-back {
+    position: absolute; 
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.face-left {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+    margin-top: 4%
+
+
+}
+
+.face-middle {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    margin-top: 7%;
+    max-height: 100%;
+    margin-bottom: 9%;
+
+}
+
+.face-right {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: end;
+    margin-bottom: 4%
+}
+
+
 .summary-container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 0%;
+    padding-right: 0%;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 0%; 
@@ -497,11 +603,12 @@ button, a {
     padding-bottom: 2px;
     color: #1b1b1b;
     font-size: 12px;
+    overflow: hidden;
 }
 
 .disclaimer-container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 0%;
+    padding-right: 0%;
 }
 
 .card-disclaimer {
