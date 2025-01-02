@@ -162,7 +162,7 @@ button, a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 18px;
     margin-top: 24px;
     margin-bottom: 10px;
 }
@@ -190,7 +190,7 @@ button, a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
 }
 
 .header-sm .category-list {
@@ -199,11 +199,11 @@ button, a {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
-    gap: 5px;
     flex-wrap: wrap;
+    gap: 5px;
     height: 36px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .header-sm .location-list {
@@ -646,7 +646,7 @@ button, a {
     padding-top: 2px;
     padding-bottom: 2px;
     color: #1b1b1b;
-    font-size: 12px;
+    font-size: 10px;
     overflow: hidden;
 
     text-align: justify;
@@ -688,14 +688,17 @@ button, a {
 
 /* Media querying for the text size on the front of the card */
 
+@media (min-width: 340px) {
+    .card-summary {
+        font-size: 12px;
+    }
+}
+
+
 @media (min-width: 380px) {
     .card-title {
         font-size: 16px;
-    }
-
-    .card-summary {
-        font-size: 14px;
-    }
+    }    
 }
 
 @media (min-width: 420px) {
@@ -709,14 +712,16 @@ button, a {
         font-size: 20px;
     }
 
-    
+    .card-summary {
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 600px) {
     .card-title {
         font-size: 22px;
     }
-    
+
     .card-summary {
         font-size: 16px;
     }
@@ -724,6 +729,10 @@ button, a {
 
 @media (min-width: 700px) {
     .card-title {
+        font-size: 14px;
+    }
+
+    .card-disclaimer {
         font-size: 14px;
     }
 
@@ -737,14 +746,18 @@ button, a {
         font-size: 16px;
     }
 
-    .card-summary {
-        font-size: 14px;
+    .card-disclaimer {
+        font-size: 16px;
     }
 }
 
 @media (min-width: 870px) {
     .card-title {
         font-size: 18px;
+    }
+    
+    .card-summary {
+        font-size: 14px;
     }
 }
 
@@ -763,6 +776,16 @@ button, a {
         font-size: 14px;
     }
 
+    .card-disclaimer {
+        font-size: 14px;
+    }
+
+    .card-summary {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1080px) {
     .card-summary {
         font-size: 12px;
     }
@@ -773,8 +796,8 @@ button, a {
         font-size: 16px;
     }
 
-    .card-summary {
-        font-size: 14px;
+    .card-disclaimer {
+        font-size: 16px;
     }
 }
 
@@ -782,15 +805,19 @@ button, a {
     .card-title {
         font-size: 18px;
     }
-
+    
     .card-summary {
-        font-size: 16px;
-    }
+        font-size: 14px;
+    }    
 }
 
 @media (min-width: 1450px) {
     .card-title {
         font-size: 20px;
+    }
+    
+    .card-summary {
+        font-size: 16px;
     }
 }
 
@@ -810,19 +837,18 @@ button, a {
 .corner {
     position: absolute;
     z-index: 12;
-    height: 80px;
-    width: 80px;
+    height: 15%;
+    width: 20%;
     background-color: white;
     align-self: end;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 .card-front .corner {
-    
-    border-top: rgb(27, 27, 27) 1.5px solid;
-    border-left: rgb(27, 27, 27) 1.5px solid;
     border-top-left-radius: 10px;
 
     background-image:
@@ -831,11 +857,11 @@ button, a {
         #3a3a3a 50%,
         white 50%
     );
+
+    box-shadow: -3px 0px 5px #3a3a3a;
 }
 
 .card-back .corner {
-    border-top: rgb(27, 27, 27) 1.5px solid;
-    border-right: rgb(27, 27, 27) 1.5px solid;
     border-top-right-radius: 10px;
 
     background-image:
@@ -844,6 +870,8 @@ button, a {
         #3a3a3a 50%,
         white 50%
     );
+
+    box-shadow: 3px 1px 5px #3a3a3a;
 }
 
 .corner-behind {
